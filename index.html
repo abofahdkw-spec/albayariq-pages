@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="شركة البيارق الملكية للمقاولات العامة - بناء، هدم، بيع، شراء، تشطيب، ترميم. بقيادة أبو خالد.">
+    <meta property="og:title" content="البيارق الملكية - بناء | هدم | بيع | شراء">
+    <meta property="og:description" content="متخصصون في البناء والتشييد والعقارات تحت إدارة أبو خالد.">
+    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0a0a'/><text y='48' font-size='40' fill='%23c9a84c' text-anchor='middle' x='32'>♛</text></svg>">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='56' font-size='56' fill='%23c9a84c'>♛</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0a0a'/><text y='56' font-size='56' fill='%23c9a84c'>♛</text></svg>">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="البيارق الملكية">
+    <title>شركة البيارق الملكية - بناء | هدم | بيع | شراء | إدارة أبو خالد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=El+Messiri:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a84c; --gold-light: #d4b96a; --dark: #0a0a0a; --dark-secondary: #111111; --dark-card: #151515;
+            --white-pure: #ffffff; --gray-light: #cccccc; --gray: #aaaaaa;
+            --gradient-gold: linear-gradient(135deg, #c9a84c, #e0c878, #b8942e, #c9a84c);
+            --shadow-gold: 0 4px 25px rgba(201, 168, 76, 0.3); --shadow-gold-lg: 0 8px 50px rgba(201, 168, 76, 0.4);
+            --border-gold: 1px solid rgba(201, 168, 76, 0.3); --border-gold-light: 1px solid rgba(201, 168, 76, 0.15);
+            --radius-lg: 20px; --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; scroll-padding-top:90px; }
+        body { font-family: 'Cairo', 'Tajawal', sans-serif; background-color: var(--dark); color: var(--white-pure); line-height: 1.8; overflow-x: hidden; -webkit-tap-highlight-color: transparent; padding-bottom: var(--safe-bottom); }
+        .skip-link { position:absolute; top:-100px; left:20px; background:var(--gradient-gold); color:#000; padding:10px 20px; border-radius:30px; z-index:99999; font-weight:700; text-decoration:none; transition:top 0.3s; }
+        .skip-link:focus { top:15px; }
+        :focus-visible { outline:2px solid var(--gold); outline-offset:3px; box-shadow:0 0 0 6px rgba(201,168,76,0.2); }
+        @media (prefers-reduced-motion: reduce) { .particle { animation: none !important; } .whatsapp-float { animation: none !important; } }
+        @media (hover: none) and (pointer: coarse) { .cursor-dot { display: none !important; } }
+        .cursor-dot { position:fixed; pointer-events:none; z-index:99999; width:16px; height:16px; border-radius:50%; background:rgba(201,168,76,0.5); mix-blend-mode:difference; transform:translate(-50%,-50%); display:none; }
+        @media (min-width:1025px) { .cursor-dot { display:block; } }
+        #loading-screen { position:fixed; inset:0; background:#0a0a0a; z-index:99998; display:flex; align-items:center; justify-content:center; flex-direction:column; transition:opacity 0.6s, visibility 0.6s; }
+        #loading-screen.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+        .loader-logo { font-family:'El Messiri',serif; font-size:clamp(1.8rem,5vw,2.5rem); color:var(--gold); animation:pulseGold 1.5s infinite; }
+        .loader-bar-wrap { width:180px; height:3px; background:#1a1a1a; border-radius:10px; overflow:hidden; }
+        .loader-bar { height:100%; background:var(--gradient-gold); width:0%; animation:loadBar 1.8s forwards; }
+        @keyframes loadBar { 0%{width:0%} 100%{width:100%} }
+        @keyframes pulseGold { 0%,100%{opacity:1; text-shadow:0 0 30px rgba(201,168,76,0.5)} 50%{opacity:0.7; text-shadow:0 0 60px rgba(201,168,76,0.9)} }
+        .scroll-progress { position:fixed; top:0; right:0; height:3px; background:var(--gradient-gold); z-index:9990; width:0%; transition:width 0.1s; }
+        .back-to-top { position:fixed; bottom:calc(110px + var(--safe-bottom)); right:20px; width:44px; height:44px; border-radius:50%; background:var(--gradient-gold); color:#0a0a0a; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:700; box-shadow:var(--shadow-gold); z-index:998; cursor:pointer; opacity:0; visibility:hidden; transition:all 0.4s; border:none; transform:translateY(20px); }
+        .back-to-top.show { opacity:1; visibility:visible; transform:translateY(0); }
+        .back-to-top:hover { box-shadow:var(--shadow-gold-lg); transform:translateY(-4px) scale(1.05); }
+        @media (max-width:768px) { .back-to-top { bottom:calc(100px + var(--safe-bottom)); right:15px; width:40px; height:40px; font-size:1rem; } }
+        .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:12px 0; transition:var(--transition); background:transparent; }
+        .navbar.scrolled { background:rgba(10,10,10,0.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); padding:6px 0; box-shadow:0 4px 30px rgba(0,0,0,0.6); border-bottom:1px solid rgba(201,168,76,0.2); }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; z-index:1001; }
+        .logo-icon { width:42px; height:42px; border-radius:50%; background:var(--gradient-gold); display:flex; align-items:center; justify-content:center; font-size:1.3rem; color:#0a0a0a; font-weight:900; box-shadow:var(--shadow-gold); }
+        .nav-links { display:flex; list-style:none; gap:6px; align-items:center; }
+        .nav-links a { text-decoration:none; color:var(--white-pure); font-size:0.9rem; font-weight:500; padding:8px 14px; border-radius:30px; transition:var(--transition); white-space:nowrap; }
+        .nav-links a:hover, .nav-links a.active { color:var(--gold); background:rgba(201,168,76,0.08); }
+        .nav-cta { background:var(--gradient-gold) !important; color:#0a0a0a !important; font-weight:700 !important; padding:10px 20px !important; }
+        .nav-login-btn { background:none; border:1px solid rgba(201,168,76,0.3); color:var(--gold); width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; transition:var(--transition); }
+        .nav-login-btn:hover { background:rgba(201,168,76,0.15); border-color:var(--gold); }
+        .user-badge { display:inline-flex; align-items:center; gap:6px; color:var(--gold); font-size:0.8rem; background:rgba(201,168,76,0.1); padding:4px 12px; border-radius:20px; border:1px solid rgba(201,168,76,0.2); cursor:default; }
+        .menu-toggle { display:none; flex-direction:column; gap:6px; cursor:pointer; z-index:1001; background:none; border:none; }
+        .menu-toggle span { width:28px; height:2.5px; background:var(--white-pure); border-radius:4px; display:block; transition:var(--transition); }
+        .menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(6px,6px); background:var(--gold); }
+        .menu-toggle.active span:nth-child(2) { opacity:0; }
+        .menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(6px,-6px); background:var(--gold); }
+        @media (max-width:1024px) {
+            .menu-toggle { display:flex; }
+            .nav-links { position:fixed; top:0; right:-100%; width:80%; max-width:340px; height:100vh; background:rgba(10,10,10,0.98); backdrop-filter:blur(25px); -webkit-backdrop-filter:blur(25px); flex-direction:column; padding:90px 25px 40px; gap:12px; transition:right 0.4s cubic-bezier(0.4,0,0.2,1); border-left:1px solid rgba(201,168,76,0.3); box-shadow:-10px 0 50px rgba(0,0,0,0.8); }
+            .nav-links.active { right:0; }
+            .nav-links a { font-size:1rem; padding:12px 18px; width:100%; text-align:center; }
+            .mobile-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:999; }
+            .mobile-overlay.active { display:block; }
+        }
+        .hero { position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--dark); padding:80px 0 40px; overflow:hidden; }
+        .hero-bg-pattern { position:absolute; inset:0; background: radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 60%, rgba(201,168,76,0.05) 0%, transparent 55%); }
+        .hero-particles { position:absolute; inset:0; overflow:hidden; }
+        .particle { position:absolute; width:2px; height:2px; background:var(--gold); border-radius:50%; animation:floatUp linear infinite; opacity:0; }
+        @keyframes floatUp { 0%{transform:translateY(100vh) scale(0); opacity:0} 10%{opacity:1} 80%{opacity:0.6} 100%{transform:translateY(-10vh) scale(1.5); opacity:0} }
+        .hero .container { position:relative; z-index:2; display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+        .hero-content { flex:1 1 400px; text-align:right; }
+        .hero-badge { display:inline-block; background:rgba(201,168,76,0.12); color:var(--gold-light); padding:6px 18px; border-radius:30px; font-size:0.8rem; font-weight:600; margin-bottom:15px; border:1px solid rgba(201,168,76,0.3); }
+        .hero-title { font-family:'El Messiri',serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:700; line-height:1.3; margin-bottom:12px; }
+        .hero-title .gold { background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        .hero-subtitle { font-size:0.95rem; color:var(--gray-light); margin-bottom:15px; max-width:500px; }
+        .hero-manager { display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,0.08); padding:8px 16px; border-radius:30px; margin-bottom:20px; border:var(--border-gold-light); font-size:0.85rem; }
+        .hero-visual { flex:1 1 300px; display:flex; justify-content:center; }
+        .hero-emblem { width:200px; height:200px; border-radius:50%; background:radial-gradient(circle, rgba(201,168,76,0.2) 0%, transparent 70%); display:flex; align-items:center; justify-content:center; border:2px solid rgba(201,168,76,0.3); position:relative; }
+        .hero-emblem-inner { width:100px; height:100px; border-radius:50%; background:var(--gradient-gold); font-size:2.5rem; font-weight:900; color:#0a0a0a; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-gold-lg); animation:emblemPulse 3s ease-in-out infinite; }
+        @keyframes emblemPulse { 0%,100%{box-shadow:0 8px 50px rgba(201,168,76,0.4)} 50%{box-shadow:0 8px 80px rgba(201,168,76,0.7)} }
+        .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 25px; border-radius:35px; font-weight:700; font-size:0.95rem; text-decoration:none; cursor:pointer; border:none; transition:var(--transition); font-family:'Cairo',sans-serif; }
+        .btn-gold { background:var(--gradient-gold); color:#0a0a0a; box-shadow:var(--shadow-gold); }
+        .btn-outline { background:transparent; color:var(--gold); border:2px solid var(--gold); }
+        .btn:hover { transform:translateY(-3px); }
+        .btn-gold:hover { box-shadow:var(--shadow-gold-lg); }
+        .section { padding:70px 0; }
+        .section-dark { background:var(--dark-secondary); }
+        .section-darker { background:var(--dark); }
+        .section-header { text-align:center; margin-bottom:50px; }
+        .section-tag { color:var(--gold); font-weight:600; letter-spacing:2px; font-size:0.8rem; text-transform:uppercase; margin-bottom:8px; }
+        .section-title { font-family:'El Messiri',serif; font-size:clamp(1.8rem,4vw,2.5rem); font-weight:700; margin-bottom:10px; }
+        .section-title .gold { color:var(--gold); }
+        .divider-gold { width:60px; height:3px; background:var(--gradient-gold); margin:12px auto; border-radius:10px; }
+        .services-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:20px; }
+        .service-card { background:var(--dark-card); border-radius:var(--radius-lg); padding:30px 20px; text-align:center; border:var(--border-gold-light); transition:var(--transition); opacity:0; transform:translateY(30px); }
+        .service-card.revealed { opacity:1; transform:translateY(0); }
+        .service-card:hover { border-color:rgba(201,168,76,0.5); box-shadow:var(--shadow-gold-lg); background:#1a1a1a; transform:translateY(-8px); }
+        .service-icon-wrap { width:60px; height:60px; border-radius:50%; background:rgba(201,168,76,0.1); margin:0 auto 15px; display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:var(--gold); }
+        .projects-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:20px; }
+        .project-card { background:var(--dark-card); border-radius:var(--radius-lg); overflow:hidden; border:var(--border-gold-light); transition:var(--transition); opacity:0; transform:translateY(30px); }
+        .project-card.revealed { opacity:1; transform:translateY(0); }
+        .project-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-card); border-color:rgba(201,168,76,0.5); }
+        .project-thumb { aspect-ratio:16/10; background:#1a1a1a; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; color:var(--gold); }
+        .project-thumb img { width:100%; height:100%; object-fit:cover; }
+        .project-icon { width:80px; height:80px; }
+        .project-info { padding:15px; }
+        .stats-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:20px; text-align:center; }
+        .stat-card { background:var(--dark-card); border-radius:var(--radius-lg); padding:25px 15px; border:var(--border-gold-light); transition:var(--transition); opacity:0; transform:translateY(30px); }
+        .stat-card.revealed { opacity:1; transform:translateY(0); }
+        .stat-card:hover { border-color:rgba(201,168,76,0.5); box-shadow:var(--shadow-gold); transform:translateY(-4px); }
+        .stat-number { font-family:'El Messiri',serif; font-size:clamp(2.5rem,5vw,3.2rem); font-weight:700; color:var(--gold); line-height:1.2; }
+        .stat-label { color:var(--gray-light); font-size:0.9rem; }
+        .testimonial-card { background:var(--dark-card); border-radius:var(--radius-lg); padding:25px; border:var(--border-gold-light); text-align:center; transition:var(--transition); }
+        .testimonial-card:hover { border-color:rgba(201,168,76,0.5); box-shadow:var(--shadow-gold); transform:translateY(-4px); }
+        .features-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:25px; }
+        .feature-card { background:var(--dark-card); border-radius:var(--radius-lg); padding:35px 25px; text-align:center; border:var(--border-gold-light); transition:var(--transition); position:relative; overflow:hidden; opacity:0; transform:translateY(30px); }
+        .feature-card.revealed { opacity:1; transform:translateY(0); }
+        .feature-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--gradient-gold); transform:scaleX(0); transition:transform 0.5s ease; }
+        .feature-card:hover::before { transform:scaleX(1); }
+        .feature-card:hover { border-color:rgba(201,168,76,0.6); box-shadow:var(--shadow-gold-lg); transform:translateY(-8px); }
+        .feature-icon { width:70px; height:70px; border-radius:50%; background:rgba(201,168,76,0.1); margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:2rem; color:var(--gold); transition:var(--transition); }
+        .feature-card:hover .feature-icon { background:rgba(201,168,76,0.2); box-shadow:0 0 30px rgba(201,168,76,0.4); }
+        .contact-grid { display:flex; gap:30px; flex-wrap:wrap; align-items:flex-start; }
+        .contact-info { flex:1 1 250px; }
+        .contact-form-wrap { flex:1 1 350px; background:var(--dark-card); padding:25px; border-radius:var(--radius-lg); border:var(--border-gold-light); }
+        .form-group { margin-bottom:14px; position:relative; }
+        .form-group label { position:absolute; right:12px; top:-8px; background:var(--dark-card); padding:0 5px; font-size:0.75rem; color:var(--gold); }
+        .form-group input, .form-group textarea, .form-group select { width:100%; padding:14px; background:#1a1a1a; border:var(--border-gold-light); border-radius:12px; color:#fff; font-family:'Cairo',sans-serif; font-size:0.95rem; transition:var(--transition); }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline:none; border-color:var(--gold); box-shadow:0 0 0 4px rgba(201,168,76,0.08); background:#1f1f1f; }
+        .form-error { color:#ff8c8c; font-size:0.8rem; margin-top:4px; display:none; }
+        .form-submit { width:100%; padding:14px; background:var(--gradient-gold); border:none; border-radius:35px; font-weight:700; cursor:pointer; color:#0a0a0a; font-size:1rem; transition:var(--transition); }
+        .form-submit:hover { box-shadow:var(--shadow-gold-lg); transform:translateY(-2px); }
+        .whatsapp-float { position:fixed; bottom:calc(30px + var(--safe-bottom)); left:20px; z-index:997; width:52px; height:52px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.5rem; text-decoration:none; box-shadow:0 6px 25px rgba(37,211,102,0.5); animation:bounceWhatsapp 2s infinite; }
+        @keyframes bounceWhatsapp { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+        .whatsapp-float:hover { transform:scale(1.12); box-shadow:0 8px 40px rgba(37,211,102,0.7); }
+        .whatsapp-tooltip { position:fixed; bottom:calc(38px + var(--safe-bottom)); left:80px; z-index:997; background:#fff; color:#0a0a0a; padding:6px 14px; border-radius:20px; font-weight:600; font-size:0.8rem; box-shadow:0 4px 20px rgba(0,0,0,0.3); pointer-events:none; white-space:nowrap; opacity:0; transition:opacity 0.4s; }
+        .whatsapp-tooltip.show { opacity:1; }
+        .footer { background:#060606; padding:40px 0 20px; border-top:1px solid rgba(201,168,76,0.2); text-align:center; font-size:0.9rem; color:var(--gray-light); position:relative; }
+        .social-icons { display:flex; gap:14px; justify-content:center; margin:15px 0; }
+        .social-btn { width:38px; height:38px; border-radius:50%; border:1px solid rgba(201,168,76,0.4); display:flex; align-items:center; justify-content:center; color:var(--gold); background:transparent; cursor:pointer; transition:var(--transition); font-size:1.1rem; padding:0; }
+        .social-btn:hover { background:var(--gradient-gold); color:#0a0a0a; border-color:transparent; }
+        /* Project Edit Modal */
+        .project-edit-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:1000; display:flex; align-items:center; justify-content:center; padding:20px; }
+        .project-edit-modal { background:#1a1a1a; border:1px solid rgba(201,168,76,0.3); border-radius:16px; max-width:700px; width:100%; max-height:90vh; overflow-y:auto; }
+        .project-edit-header { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid rgba(255,255,255,0.05); }
+        .project-edit-header h3 { color:var(--gold); margin:0; font-size:1.1rem; }
+        .project-edit-close { background:none; border:none; color:var(--gray); font-size:1.5rem; cursor:pointer; padding:0 4px; }
+        .project-edit-body { padding:20px; }
+        .image-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(100px, 1fr)); gap:10px; margin-bottom:10px; min-height:100px; border:2px dashed rgba(201,168,76,0.2); border-radius:12px; padding:10px; }
+        .image-grid-item { position:relative; aspect-ratio:1; border-radius:8px; overflow:hidden; cursor:grab; border:2px solid transparent; transition:border-color 0.2s; }
+        .image-grid-item:hover { border-color:var(--gold); }
+        .image-grid-item img { width:100%; height:100%; object-fit:cover; pointer-events:none; }
+        .img-del-btn { position:absolute; top:4px; left:4px; width:24px; height:24px; border-radius:50%; border:none; background:rgba(220,50,50,0.9); color:#fff; font-size:0.7rem; cursor:pointer; opacity:0; transition:opacity 0.2s; display:flex; align-items:center; justify-content:center; }
+        .image-grid-item:hover .img-del-btn { opacity:1; }
+        .img-cover-badge { position:absolute; bottom:4px; right:4px; background:var(--gradient-gold); color:#000; font-size:0.6rem; font-weight:700; padding:1px 6px; border-radius:4px; }
+        .image-grid-add { aspect-ratio:1; border:2px dashed rgba(201,168,76,0.4); border-radius:8px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--gold); cursor:pointer; transition:0.2s; }
+        .image-grid-add:hover { background:rgba(201,168,76,0.1); }
+        .image-grid-add span { font-size:2rem; line-height:1; }
+        .project-edit-fields label { display:block; color:var(--gold); margin:10px 0 4px; font-size:0.85rem; }
+        .project-edit-fields input, .project-edit-fields textarea { width:100%; padding:8px 12px; border-radius:8px; background:#111; border:1px solid rgba(255,255,255,0.1); color:#fff; font-family:inherit; font-size:0.9rem; box-sizing:border-box; }
+        .project-edit-fields textarea { resize:vertical; min-height:60px; }
+        .project-edit-footer { display:flex; gap:10px; justify-content:flex-end; padding:16px 20px; border-top:1px solid rgba(255,255,255,0.05); }
+        /* Gallery */
+        #projectGallery { flex:1; min-width:200px; border-radius:15px; overflow:hidden; background:#111; }
+        .gallery-main { position:relative; width:100%; aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; cursor:pointer; overflow:hidden; }
+        .gallery-main:hover .gallery-nav { opacity:1; }
+        .gallery-img { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; user-select:none; }
+        .gallery-main:hover .gallery-img { transform:scale(1.03); }
+        .gallery-nav { position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:none; background:rgba(0,0,0,0.6); color:#fff; font-size:0.9rem; cursor:pointer; opacity:0; transition:0.3s; display:flex; align-items:center; justify-content:center; }
+        .gallery-prev { right:10px; }
+        .gallery-next { left:10px; }
+        .gallery-nav:hover { background:rgba(0,0,0,0.8); }
+        .gallery-dots { display:flex; gap:6px; justify-content:center; padding:8px 0; background:rgba(0,0,0,0.3); }
+        .gallery-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.3); cursor:pointer; transition:0.2s; }
+        .gallery-dot.active { background:var(--gold); transform:scale(1.3); }
+        .multi-img-badge { position:absolute; top:10px; left:10px; background:rgba(0,0,0,0.7); color:#fff; padding:2px 8px; border-radius:12px; font-size:0.65rem; display:flex; align-items:center; gap:4px; }
+        .project-tag { position:absolute; top:10px; right:10px; background:var(--gradient-gold); color:#000; padding:2px 10px; border-radius:20px; font-size:0.7rem; font-weight:700; }
+        /* Lightbox */
+        .lightbox-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:2000; display:none; align-items:center; justify-content:center; flex-direction:column; }
+        .lightbox-overlay.active { display:flex; }
+        .lightbox-close { position:absolute; top:20px; left:20px; width:40px; height:40px; border-radius:50%; border:none; background:rgba(255,255,255,0.1); color:#fff; font-size:1.3rem; cursor:pointer; z-index:10; display:flex; align-items:center; justify-content:center; transition:0.2s; }
+        .lightbox-close:hover { background:rgba(255,255,255,0.2); }
+        .lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:none; background:rgba(255,255,255,0.1); color:#fff; font-size:1.2rem; cursor:pointer; z-index:10; transition:0.2s; display:flex; align-items:center; justify-content:center; }
+        .lightbox-nav:hover { background:rgba(255,255,255,0.25); }
+        .lightbox-prev { right:20px; }
+        .lightbox-next { left:20px; }
+        .lightbox-img-wrap { display:flex; align-items:center; justify-content:center; width:90%; height:80%; overflow:hidden; cursor:grab; }
+        .lightbox-img-wrap img { max-width:100%; max-height:100%; transition:transform 0.15s ease; user-select:none; will-change:transform; }
+        .lightbox-counter { position:absolute; bottom:20px; color:rgba(255,255,255,0.6); font-size:0.85rem; font-family:system-ui,sans-serif; }
+        .lightbox-zoom-controls { position:absolute; bottom:20px; left:20px; display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); border-radius:20px; padding:4px 10px; }
+        .zoom-btn { width:28px; height:28px; border-radius:50%; border:none; background:rgba(255,255,255,0.15); color:#fff; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; }
+        .zoom-btn:hover { background:rgba(255,255,255,0.3); }
+        .zoom-level { color:rgba(255,255,255,0.6); font-size:0.75rem; min-width:40px; text-align:center; font-family:system-ui,sans-serif; }
+        .footer-links { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; list-style:none; margin:15px 0; }
+        .footer-links a { color:var(--gray-light); text-decoration:none; }
+        .footer-links a:hover { color:var(--gold); }
+        .admin-trigger { position:absolute; bottom:10px; left:10px; background:none; border:none; color:#333; font-size:1.2rem; cursor:pointer; opacity:0.3; transition:opacity 0.3s; }
+        .admin-trigger:hover { opacity:1; color:var(--gold); }
+        #privacyModal, #passwordModal, #adminModal {
+            display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:99999;
+            align-items:center; justify-content:center; padding:20px;
+        }
+        #privacyModal.active, #passwordModal.active, #adminModal.active { display:flex; }
+        .modal-content {
+            background:#151515; border:1px solid var(--gold); border-radius:20px;
+            padding:30px; max-width:500px; width:100%; text-align:right;
+            transform:scale(0.9); opacity:0; transition:transform 0.3s ease, opacity 0.3s ease;
+            max-height:85vh; overflow-y:auto;
+        }
+        #privacyModal.active .modal-content, #passwordModal.active .modal-content, #adminModal.active .modal-content { transform:scale(1); opacity:1; }
+        .admin-modal-content {
+            background:#151515; border:1px solid var(--gold); border-radius:20px;
+            padding:25px; max-width:1100px; width:100%; text-align:right;
+            transform:scale(0.9); opacity:0; transition:transform 0.3s ease, opacity 0.3s ease;
+            max-height:85vh; overflow-y:auto;
+        }
+        #adminModal.active .admin-modal-content { transform:scale(1); opacity:1; }
+        #projectModal {
+            display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:99998;
+            align-items:center; justify-content:center; padding:15px;
+        }
+        #projectModal.active { display:flex; }
+        .project-modal-content {
+            background:#151515; border:1px solid var(--gold); border-radius:20px;
+            max-width:750px; width:100%; text-align:right; position:relative;
+            transform:scale(0.9); opacity:0; transition:transform 0.3s ease, opacity 0.3s ease;
+            max-height:90vh; overflow-y:auto; direction:ltr;
+        }
+        #projectModal.active .project-modal-content { transform:scale(1); opacity:1; }
+        #projectModal .project-modal-content > * { direction:rtl; }
+        .comment-item { padding:12px; margin-bottom:8px; background:rgba(255,255,255,0.03); border-radius:10px; border-right:2px solid rgba(201,168,76,0.15); }
+        .comment-item.pinned { border-right-color:var(--gold); background:rgba(201,168,76,0.06); }
+        .comment-item.reply { margin-right:30px; border-right-color:rgba(201,168,76,0.08); }
+        .comment-avatar { width:32px; height:32px; border-radius:50%; background:var(--gradient-gold); display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:#000; margin-left:8px; }
+        .comment-name { font-weight:600; font-size:0.85rem; color:var(--gold); }
+        .comment-time { font-size:0.7rem; color:var(--gray); margin-right:8px; }
+        .comment-content { margin:6px 0 8px; font-size:0.9rem; color:#ddd; line-height:1.6; }
+        .comment-actions { display:flex; gap:12px; align-items:center; }
+        .comment-actions button, .comment-actions .reaction-btn { background:none; border:none; color:var(--gray); cursor:pointer; font-size:0.75rem; font-family:inherit; padding:2px 6px; border-radius:6px; transition:var(--transition); }
+        .comment-actions button:hover, .comment-actions .reaction-btn:hover { color:var(--gold); background:rgba(201,168,76,0.1); }
+        .reaction-btn.active { color:var(--gold); background:rgba(201,168,76,0.12); }
+        .reactions-wrap { display:inline-flex; gap:2px; }
+        .reactions-wrap .reaction-btn { font-size:0.9rem; padding:2px 5px; }
+        .reply-form-wrap { margin-top:8px; margin-right:30px; display:none; }
+        .reply-form-wrap textarea { width:100%; padding:8px; background:#1a1a1a; border:1px solid #333; border-radius:8px; color:#fff; font-family:inherit; font-size:0.85rem; resize:vertical; min-height:50px; margin-bottom:5px; }
+        .badge-pin { font-size:0.6rem; background:var(--gradient-gold); color:#000; padding:1px 8px; border-radius:10px; margin-right:6px; font-weight:700; }
+        @media (max-width:600px) {
+            .comment-item.reply { margin-right:15px; }
+            .project-modal-content { max-height:95vh; }
+        }
+        .toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(100px); background:var(--dark-card); color:var(--gold); padding:12px 28px; border-radius:30px; font-weight:600; z-index:99999; border:1px solid var(--gold); transition:transform 0.4s ease; pointer-events:none; white-space:nowrap; }
+        .toast.show { transform:translateX(-50%) translateY(0); }
+        .admin-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; border-bottom:2px solid rgba(201,168,76,0.3); padding-bottom:15px; }
+        .admin-tab-btn { background:transparent; border:1px solid var(--gold); color:var(--gold); padding:8px 16px; border-radius:30px; cursor:pointer; font-weight:600; transition:var(--transition); font-family:inherit; font-size:0.8rem; }
+        .admin-tab-btn.active, .admin-tab-btn:hover { background:var(--gradient-gold); color:#000; }
+        .admin-tab-content { display:none; }
+        .admin-tab-content.active { display:block; }
+        .admin-card { background:var(--dark-card); border:1px solid rgba(201,168,76,0.2); border-radius:var(--radius-lg); padding:20px; margin-bottom:15px; }
+        .admin-card h3 { color:var(--gold); margin-bottom:15px; font-family:'El Messiri', serif; }
+        .admin-form-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:15px; margin-bottom:12px; }
+        .admin-form-group { display:flex; flex-direction:column; }
+        .admin-form-group label { color:var(--gold); margin-bottom:4px; font-size:0.8rem; }
+        .admin-form-group input, .admin-form-group textarea, .admin-form-group select { background:#1a1a1a; border:1px solid #333; border-radius:10px; padding:10px; color:#fff; font-family:inherit; font-size:0.9rem; }
+        .admin-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border-radius:25px; font-weight:700; cursor:pointer; border:none; transition:var(--transition); font-family:inherit; font-size:0.85rem; }
+        .admin-btn-gold { background:var(--gradient-gold); color:#000; }
+        .admin-btn-danger { background:#b71c1c; color:#fff; }
+        .admin-flex-between { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+        .admin-item { background:#1a1a1a; border:1px solid #333; border-radius:12px; padding:12px; margin-bottom:8px; }
+        .admin-item img { max-width:80px; border-radius:8px; margin-left:10px; }
+        @media (max-width:600px) {
+            .admin-tabs { flex-direction:column; align-items:stretch; }
+            .admin-tab-btn { text-align:center; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#home" class="skip-link" aria-label="تجاوز إلى المحتوى الرئيسي">تجاوز إلى المحتوى</a>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div id="loading-screen" aria-hidden="true">
+        <div class="loader-logo">البيارق الملكية</div>
+        <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <button class="back-to-top" id="backToTop" aria-label="العودة إلى أعلى الصفحة">↑</button>
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="القائمة الرئيسية">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="#" class="nav-logo" aria-label="البيارق الملكية - الصفحة الرئيسية">
+                <div class="logo-icon" aria-hidden="true">♛</div>
+                <div>
+                    <span style="font-family:'El Messiri',serif; color:var(--gold); font-size:1.1rem;">البيارق الملكية</span>
+                    <br><small style="color:var(--gray-light);">Royal Standards</small>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" class="active" data-section="home" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="#about" data-section="about" role="menuitem">عن الشركة</a></li>
+                <li role="none"><a href="#services" data-section="services" role="menuitem">خدماتنا</a></li>
+                <li role="none"><a href="#works" data-section="works" role="menuitem">أعمالنا</a></li>
+                <li role="none"><a href="#why-us" data-section="why-us" role="menuitem">لماذا نحن</a></li>
+                <li role="none"><a href="#testimonials" data-section="testimonials" role="menuitem">التقييمات</a></li>
+                <li role="none"><a href="#contact" data-section="contact" role="menuitem">اتصل بنا</a></li>
+                <li role="none"><a href="#contact" class="nav-cta" role="menuitem">اطلب عرض سعر</a></li>
+                <li role="none"><button class="nav-login-btn" id="navLoginBtn" onclick="openPasswordModal()" aria-label="تسجيل الدخول"><i class="fas fa-user"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-hard-hat" aria-hidden="true"></i> شركة البيارق الملكية</div>
+                <h1 class="hero-title" id="heroTitle">نبني <span class="gold">المستقبل</span><br>بأعلى <span class="gold">الجودة</span></h1>
+                <p class="hero-subtitle">متخصصون في البناء والهدم والبيع والشراء وكل ما يخص التشييد والعقارات.</p>
+                <div class="hero-manager"><i class="fas fa-crown" style="color:var(--gold);" aria-hidden="true"></i> بإدارة: <strong id="managerName">أبو خالد</strong></div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <a href="#services" class="btn btn-gold"><i class="fas fa-tools" aria-hidden="true"></i> خدماتنا</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-phone" aria-hidden="true"></i> تواصل معنا</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-emblem"><div class="hero-emblem-inner">♛</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="about" aria-labelledby="aboutTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">من نحن</span>
+                <h2 class="section-title" id="aboutTitle">شركة <span class="gold">البيارق الملكية</span></h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+                <p style="color:var(--gray-light);">خبرة واسعة في البناء والتشييد تحت إدارة <strong id="aboutManager">أبو خالد</strong>.</p>
+            </div>
+            <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:center;">
+                <div style="flex:1 1 300px; text-align:center; font-size:5rem; color:var(--gold);" aria-hidden="true"><i class="fas fa-building"></i></div>
+                <div style="flex:1 1 400px;">
+                    <h3 style="color:var(--gold);">قصتنا بدأت من رؤية</h3>
+                    <p>تأسست شركة البيارق الملكية بقيادة <strong>أبو خالد</strong> لتقديم خدمات بناء وهدم وبيع وشراء العقارات بأعلى المعايير.</p>
+                    <ul style="list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                        <li><i class="fas fa-check" style="color:var(--gold);" aria-hidden="true"></i> خبرة 15 عاماً</li>
+                        <li><i class="fas fa-check" style="color:var(--gold);" aria-hidden="true"></i> فريق هندسي</li>
+                        <li><i class="fas fa-check" style="color:var(--gold);" aria-hidden="true"></i> معدات حديثة</li>
+                        <li><i class="fas fa-check" style="color:var(--gold);" aria-hidden="true"></i> أسعار تنافسية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-darker" id="services" aria-labelledby="servicesTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">خدماتنا</span>
+                <h2 class="section-title" id="servicesTitle">كل ما يخص <span class="gold">البناء</span></h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+            </div>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="stats" aria-label="إحصائيات الشركة">
+        <div class="container">
+            <div class="stats-row" id="statsRow">
+                <div class="stat-card"><div class="stat-number" data-count="350" data-suffix="+">0</div><div class="stat-label">مشروع</div></div>
+                <div class="stat-card"><div class="stat-number" data-count="15" data-suffix="">0</div><div class="stat-label">عام خبرة</div></div>
+                <div class="stat-card"><div class="stat-number" data-count="200" data-suffix="+">0</div><div class="stat-label">عميل</div></div>
+                <div class="stat-card"><div class="stat-number" data-count="50" data-suffix="+">0</div><div class="stat-label">مهندس</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-darker" id="works" aria-labelledby="worksTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">أعمالنا</span>
+                <h2 class="section-title" id="worksTitle">مشاريع <span class="gold">أنجزناها</span></h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="why-us" aria-labelledby="whyUsTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">لماذا نحن</span>
+                <h2 class="section-title" id="whyUsTitle">لماذا <span class="gold">البيارق الملكية</span> هي خيارك الأمثل؟</h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+            </div>
+            <div class="features-grid" id="featuresGrid"></div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="testimonials" aria-labelledby="testimonialsTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">تقييمات العملاء</span>
+                <h2 class="section-title" id="testimonialsTitle">ماذا قال <span class="gold">عملاؤنا</span></h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;" id="testimonialsGrid"></div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="contact" aria-labelledby="contactTitle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">اتصل بنا</span>
+                <h2 class="section-title" id="contactTitle">تواصل مع <span class="gold" id="contactManager">أبو خالد</span></h2>
+                <div class="divider-gold" aria-hidden="true"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" id="contactInfo"></div>
+                <div class="contact-form-wrap">
+                    <form id="contactForm" aria-label="نموذج الاتصال">
+                        <div class="form-group"><label for="name">الاسم *</label><input type="text" id="name" name="name" required aria-required="true"></div>
+                        <div class="form-group"><label for="phone">الجوال *</label><input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phoneError"><span class="form-error" id="phoneError" role="alert">يجب أن يبدأ بـ 09 ويتكون من 10 أرقام</span></div>
+                        <div class="form-group"><label for="service">نوع الخدمة</label><select id="service" name="service" required aria-required="true"><option value="" disabled selected>اختر الخدمة</option><option>بناء وتشييد</option><option>هدم وإزالة</option><option>بيع عقار</option><option>شراء عقار</option><option>تشطيب وديكور</option><option>ترميم وصيانة</option><option>استشارة عقارية</option><option>أخرى</option></select></div>
+                        <div class="form-group"><label for="message">التفاصيل</label><textarea id="message" name="message" rows="3" required aria-required="true"></textarea></div>
+                        <button type="submit" class="form-submit">إرسال 🚀</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-logo">♛ البيارق الملكية</div>
+        <p>بناء | هدم | بيع | شراء | كل ما يخص البناء</p>
+        <div class="social-icons" id="socialIcons"></div>
+        <ul class="footer-links">
+            <li><a href="#home">الرئيسية</a></li><li><a href="#about">عن الشركة</a></li><li><a href="#services">الخدمات</a></li><li><a href="#works">الأعمال</a></li><li><a href="#why-us">لماذا نحن</a></li><li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+        <p style="margin:15px 0;">© 2026 جميع الحقوق محفوظة - إدارة <strong id="footerManager">أبو خالد</strong></p>
+        <p><button onclick="togglePrivacyModal()" style="background:none; border:none; color:var(--gray-light); text-decoration:underline; cursor:pointer; font-family:inherit; font-size:inherit;" aria-haspopup="dialog">سياسة الخصوصية</button></p>
+        <button class="admin-trigger" onclick="openPasswordModal()" title="الإدارة" aria-label="فتح لوحة الإدارة">⚙️</button>
+    </footer>
+
+    <div id="passwordModal" role="dialog" aria-modal="true" aria-labelledby="passwordTitle">
+        <div class="modal-content" style="max-width:420px;">
+            <button onclick="closePasswordModal()" style="position:absolute; top:15px; left:20px; background:none; border:none; color:var(--gold); font-size:1.5rem; cursor:pointer;" aria-label="إغلاق">✕</button>
+
+            <!-- Tabs -->
+            <div style="display:flex; gap:0; margin-bottom:20px; border-bottom:1px solid rgba(201,168,76,0.2);">
+              <button class="auth-tab active" id="tabUser" onclick="switchAuthTab('user')" style="flex:1; padding:10px; background:none; border:none; color:var(--gold); font-family:inherit; font-size:0.9rem; cursor:pointer; border-bottom:2px solid var(--gold); transition:var(--transition);">👤 دخول الأعضاء</button>
+              <button class="auth-tab" id="tabAdmin" onclick="switchAuthTab('admin')" style="flex:1; padding:10px; background:none; border:none; color:var(--gray); font-family:inherit; font-size:0.9rem; cursor:pointer; border-bottom:2px solid transparent; transition:var(--transition);">⚙️ المشرف</button>
+            </div>
+
+            <!-- User Auth Panel -->
+            <div id="authUserPanel">
+              <h3 style="color:var(--gold); margin-bottom:5px;">مرحباً بك</h3>
+              <p style="color:var(--gray-light); font-size:0.85rem; margin-bottom:15px;">سجل أو ادخل بحسابك للمتابعة</p>
+
+              <!-- اسم المستخدم (للتسجيل) -->
+              <input type="text" id="userName" placeholder="الاسم" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:10px;" autocomplete="off">
+              <!-- رقم الجوال -->
+              <input type="tel" id="userPhone" placeholder="رقم الجوال" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:10px;" autocomplete="off">
+              <!-- كلمة المرور -->
+              <input type="password" id="userPassword" placeholder="كلمة المرور (6 أحرف على الأقل)" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:15px;" autocomplete="off">
+
+              <div style="display:flex; gap:10px;">
+                <button class="btn btn-gold" style="flex:1;" onclick="userLogin()">دخول</button>
+                <button class="btn" style="flex:1; background:#333; color:#fff;" onclick="userRegister()">تسجيل جديد</button>
+              </div>
+              <p id="userAuthError" style="color:#ff8c8c; margin-top:10px; display:none;"></p>
+            </div>
+
+            <!-- Admin Auth Panel -->
+            <div id="authAdminPanel" style="display:none;">
+              <h3 style="color:var(--gold); margin-bottom:5px;">🔐 لوحة المشرف</h3>
+              <p style="color:var(--gray-light); font-size:0.85rem; margin-bottom:15px;">أدخل كلمة المرور للوصول إلى الإعدادات.</p>
+              <input type="password" id="adminPassword" placeholder="كلمة المرور" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:15px;" autocomplete="off">
+              <button class="btn btn-gold" id="loginBtn" style="width:100%;" onclick="loginAdmin()">دخول</button>
+              <p id="passwordError" style="color:#ff8c8c; margin-top:10px; display:none;"></p>
+              <div id="recoverSection" style="display:none; margin-top:15px;">
+                <p style="color:var(--gray-light); margin-bottom:10px;" id="recoverMessage">أدخل بريدك الإلكتروني لإرسال كود الاسترجاع:</p>
+                <input type="email" id="recoverEmail" placeholder="البريد الإلكتروني" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:10px;" autocomplete="off">
+                <input type="text" id="recoverCode" placeholder="كود التحقق" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:10px; display:none;" autocomplete="off">
+                <input type="password" id="newPasswordRecover" placeholder="كلمة مرور جديدة" style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; margin-bottom:10px; display:none;" autocomplete="off">
+                <button class="btn btn-gold" style="width:100%;" id="sendCodeBtn" onclick="sendResetCode()">📧 إرسال الكود</button>
+                <button class="btn btn-gold" style="width:100%; display:none;" id="verifyCodeBtn" onclick="verifyResetCode()">🔄 استرجاع</button>
+                <p id="codeSentMsg" style="color:#4caf50; margin-top:8px; display:none;"></p>
+              </div>
+              <button onclick="showRecover()" style="background:none; border:none; color:var(--gray); text-decoration:underline; cursor:pointer; margin-top:10px; font-family:inherit; font-size:0.85rem;">نسيت كلمة المرور؟</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+        <div class="admin-modal-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h3 style="color:var(--gold);" id="adminTitle">♛ لوحة تحكم البيارق الملكية</h3>
+                <button onclick="closeAdminModal()" style="background:none; border:none; color:var(--gold); font-size:1.8rem; cursor:pointer;" aria-label="إغلاق">✕</button>
+            </div>
+            <div class="admin-tabs" id="adminTabs">
+                <button class="admin-tab-btn active" data-admin-tab="general">الإعدادات العامة</button>
+                <button class="admin-tab-btn" data-admin-tab="stats">الإحصائيات</button>
+                <button class="admin-tab-btn" data-admin-tab="services">الخدمات</button>
+                <button class="admin-tab-btn" data-admin-tab="projects">المشاريع</button>
+                <button class="admin-tab-btn" data-admin-tab="testimonials">التقييمات</button>
+                <button class="admin-tab-btn" data-admin-tab="features">لماذا نحن</button>
+                <button class="admin-tab-btn" data-admin-tab="social">التواصل الاجتماعي</button>
+                <button class="admin-tab-btn" data-admin-tab="messages">الرسائل</button>
+                <button class="admin-tab-btn" data-admin-tab="password">تغيير كلمة المرور</button>
+                <button class="admin-tab-btn" data-admin-tab="reset">إعادة تعيين</button>
+            </div>
+            <div id="adminContent"></div>
+        </div>
+    </div>
+
+    <div id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+        <div class="modal-content">
+            <button onclick="togglePrivacyModal()" style="position:absolute; top:15px; left:20px; background:none; border:none; color:var(--gold); font-size:1.5rem; cursor:pointer;" aria-label="إغلاق">✕</button>
+            <h3 style="color:var(--gold); margin-bottom:15px;" id="privacyTitle">سياسة الخصوصية</h3>
+            <p style="color:var(--gray-light); margin-bottom:20px;">نحن في شركة البيارق الملكية نلتزم بحماية بياناتكم. المعلومات التي تقدمونها عبر النموذج تستخدم فقط للتواصل معكم بخصوص طلبكم ولا تشارك مع أي طرف ثالث.</p>
+            <button onclick="togglePrivacyModal()" style="background:var(--gradient-gold); border:none; padding:10px 25px; border-radius:30px; font-weight:bold; cursor:pointer; color:#0a0a0a;">حسنًا</button>
+        </div>
+    </div>
+
+    <!-- 🟢 Project Modal with Comments -->
+    <div id="projectModal" role="dialog" aria-modal="true">
+        <div class="project-modal-content">
+            <button onclick="closeProjectModal()" style="position:absolute; top:15px; left:20px; background:none; border:none; color:var(--gold); font-size:1.8rem; cursor:pointer; z-index:10;" aria-label="إغلاق">✕</button>
+            <div id="projectDetail" style="padding:20px;">
+                <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                    <div id="projectGallery"></div>
+                    <div style="flex:2; min-width:250px;">
+                        <h2 id="projectTitle" style="color:var(--gold); margin-bottom:5px;"></h2>
+                        <span id="projectTag" style="display:inline-block; background:var(--gradient-gold); color:#000; padding:2px 12px; border-radius:20px; font-size:0.8rem; font-weight:700; margin-bottom:10px;"></span>
+                        <p id="projectDesc" style="color:var(--gray-light); margin-bottom:15px;"></p>
+                    </div>
+                </div>
+                <hr style="border-color:rgba(201,168,76,0.15); margin:20px 0;">
+                <h3 style="color:var(--gold); margin-bottom:15px;">💬 التعليقات <span id="commentTotal" style="font-size:0.85rem;color:var(--gray);"></span></h3>
+                <!-- Comment form -->
+                <div id="commentFormWrap" style="margin-bottom:20px; display:none;">
+                    <textarea id="commentInput" placeholder="اكتب تعليقك..." style="width:100%; padding:12px; background:#1a1a1a; border:1px solid #333; border-radius:10px; color:#fff; font-family:inherit; font-size:0.9rem; resize:vertical; min-height:70px; margin-bottom:10px;"></textarea>
+                    <button class="btn btn-gold" onclick="submitComment()" style="font-size:0.85rem; padding:8px 20px;">💬 إرسال</button>
+                </div>
+                <div id="commentGuestMsg" style="margin-bottom:20px; padding:12px; background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:10px; text-align:center; color:var(--gray); font-size:0.9rem; display:none;">
+                    <i class="fas fa-user-lock"></i> سجل دخول أو اشترك لتكتب تعليقاً
+                    <button onclick="closeProjectModal();openPasswordModal();" style="display:block; margin:8px auto 0; background:var(--gradient-gold); border:none; padding:8px 20px; border-radius:30px; font-weight:700; cursor:pointer; color:#000; font-family:inherit;">تسجيل الدخول</button>
+                </div>
+                <!-- Comments list -->
+                <div id="commentsList" style="max-height:400px; overflow-y:auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="whatsapp-float" target="_blank" rel="noopener noreferrer" id="whatsappLink" aria-label="تواصل عبر واتساب"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+    <div class="whatsapp-tooltip" id="whatsappTooltip" aria-hidden="true">تحدث معنا</div>
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <script>
+    // ========== API helpers ==========
+    const API_BASE = '/api';
+
+    async function apiGet(path) {
+      const res = await fetch(API_BASE + path);
+      if (!res.ok) throw new Error('فشل الاتصال');
+      return res.json();
+    }
+
+    async function apiPost(path, data) {
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      return res.json();
+    }
+
+    async function apiPostAuth(path, data) {
+      const token = getToken();
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify(data)
+      });
+      return res.json();
+    }
+
+    // ========== Token management ==========
+    function getToken() { return localStorage.getItem('admin_token') || ''; }
+    function setToken(t) { localStorage.setItem('admin_token', t); }
+    function clearToken() { localStorage.removeItem('admin_token'); }
+
+    // ========== UI Helpers ==========
+    const escapeHTML = (str) => {
+      if (str === undefined || str === null) return '';
+      const div = document.createElement('div');
+      div.textContent = String(str);
+      return div.innerHTML;
+    };
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // ========== Config state ==========
+    let CONFIG = null;
+
+    // ========== Load config from server ==========
+    async function loadConfig() {
+      // محاولة تحميل من API أولاً (للموقع مع السيرفر)
+      try {
+        const data = await apiGet('/config');
+        if (data && !data.error) {
+          CONFIG = data;
+          applyConfig();
+          return;
+        }
+      } catch (err) {
+        console.warn('API غير متاح, نحاول التحميل من config.json');
+      }
+      // Fallback: التحميل من ملف ثابت (GitHub Pages)
+      try {
+        const res = await fetch('/config.json');
+        const data = await res.json();
+        if (data && data.manager) {
+          CONFIG = data;
+          applyConfig();
+          console.log('✅ تم تحميل الإعدادات من config.json');
+          return;
+        }
+      } catch (err) {
+        console.error('فشل تحميل الإعدادات:', err);
+      }
+      showToast('⚠️ فشل تحميل بيانات الموقع');
+    }
+
+    // ========== Save config to server ==========
+    async function saveConfig() {
+      try {
+        const result = await apiPostAuth('/config', CONFIG);
+        if (result.success) {
+          showToast('✅ تم حفظ التغييرات بنجاح!');
+        } else {
+          showToast('❌ فشل الحفظ');
+        }
+      } catch (err) {
+        showToast('❌ فشل الاتصال بالسيرفر');
+      }
+    }
+
+    // ========== Apply config to page ==========
+    function applyConfig() {
+      if (!CONFIG) return;
+      let wa = (CONFIG.whatsapp || '').replace(/[^0-9]/g, '');
+      document.getElementById('whatsappLink').href = 'https://wa.me/' + wa;
+      document.getElementById('contactInfo').innerHTML = `
+        <p><i class="fas fa-phone" style="color:var(--gold); margin-left:8px;"></i> ${escapeHTML(CONFIG.phone)}</p>
+        <p><i class="fas fa-envelope" style="color:var(--gold); margin-left:8px;"></i> ${escapeHTML(CONFIG.email)}</p>
+        <p><i class="fas fa-map-marker-alt" style="color:var(--gold); margin-left:8px;"></i> ${escapeHTML(CONFIG.address)}</p>
+        <p style="margin-top:20px;">🕐 يومياً من 8 صباحاً حتى 10 مساءً</p>`;
+      ['managerName', 'aboutManager', 'contactManager', 'footerManager'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = CONFIG.manager;
+      });
+      buildStats();
+      buildServices();
+      buildProjects();
+      buildTestimonials();
+      buildFeatures();
+      buildSocial();
+      observeReveal();
+    }
+
+    // ========== Comments System ==========
+
+    let commentTargetIndex = 0;
+    let commentSSE = null;
+
+    // الوقت النسبي
+    function relativeTime(dateStr) {
+      const now = Date.now();
+      const then = new Date(dateStr + 'Z').getTime();
+      const diff = Math.floor((now - then) / 1000);
+      if (diff < 60) return 'منذ لحظات';
+      if (diff < 3600) return `منذ ${Math.floor(diff/60)} دقيقة`;
+      if (diff < 86400) return `منذ ${Math.floor(diff/3600)} ساعة`;
+      if (diff < 2592000) return `منذ ${Math.floor(diff/86400)} يوم`;
+      return `منذ ${Math.floor(diff/2592000)} شهر`;
+    }
+
+    // جلب عدد التعليقات لكل مشروع
+    async function loadCommentCounts() {
+      if (!CONFIG || !CONFIG.projects) return;
+      for (let i = 0; i < CONFIG.projects.length; i++) {
+        try {
+          const res = await fetch(`/api/comments/project/${i}`);
+          const data = await res.json();
+          if (data.success) {
+            const el = document.querySelector(`.comment-count[data-project="${i}"] .count-num`);
+            if (el) el.textContent = data.data.length;
+          }
+        } catch {}
+      }
+    }
+
+    // === Gallery State ===
+    let currentGalleryIndex = 0;
+    let projectImages = [];
+
+    function renderGalleryImage() {
+      const wrap = document.getElementById('projectGallery');
+      if (!projectImages.length) { wrap.style.display = 'none'; return; }
+      wrap.style.display = 'block';
+      const img = projectImages[currentGalleryIndex];
+      const total = projectImages.length;
+
+      let dots = '';
+      for (let i = 0; i < total; i++) {
+        dots += `<span class="gallery-dot ${i === currentGalleryIndex ? 'active' : ''}" onclick="event.stopPropagation();goToImage(${i})"></span>`;
+      }
+
+      wrap.innerHTML = `
+        <div class="gallery-main" onclick="openLightbox(${currentGalleryIndex})">
+          <img src="${escapeHTML(img)}" alt="" class="gallery-img" id="galleryImg" draggable="false">
+          ${total > 1 ? `
+            <button class="gallery-nav gallery-prev" onclick="event.stopPropagation();prevImage()">◀</button>
+            <button class="gallery-nav gallery-next" onclick="event.stopPropagation();nextImage()">▶</button>
+          ` : ''}
+        </div>
+        ${total > 1 ? `<div class="gallery-dots">${dots}</div>` : ''}
+      `;
+
+      const prev = wrap.querySelector('.gallery-prev');
+      const next = wrap.querySelector('.gallery-next');
+      if (prev) prev.style.display = currentGalleryIndex === 0 ? 'none' : 'flex';
+      if (next) next.style.display = currentGalleryIndex === total - 1 ? 'none' : 'flex';
+    }
+
+    window.prevImage = function() {
+      if (currentGalleryIndex > 0) { currentGalleryIndex--; renderGalleryImage(); }
+    };
+    window.nextImage = function() {
+      if (currentGalleryIndex < projectImages.length - 1) { currentGalleryIndex++; renderGalleryImage(); }
+    };
+    window.goToImage = function(i) {
+      currentGalleryIndex = i; renderGalleryImage();
+    };
+
+    // فتح نافذة المشروع
+    window.openProjectModal = function(index) {
+      if (!CONFIG || !CONFIG.projects[index]) return;
+      const p = CONFIG.projects[index];
+      commentTargetIndex = index;
+      currentGalleryIndex = 0;
+      projectImages = p.images || [];
+
+      document.getElementById('projectModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Gallery
+      renderGalleryImage();
+
+      document.getElementById('projectTitle').textContent = p.title;
+      document.getElementById('projectTag').textContent = p.tag;
+      document.getElementById('projectDesc').textContent = p.desc;
+
+      // التعليقات
+      const token = getUserToken();
+      document.getElementById('commentFormWrap').style.display = token ? 'block' : 'none';
+      document.getElementById('commentGuestMsg').style.display = token ? 'none' : 'block';
+      document.getElementById('commentInput').value = '';
+
+      loadComments();
+      connectCommentSSE();
+    };
+
+    window.closeProjectModal = function() {
+      document.getElementById('projectModal').classList.remove('active');
+      document.body.style.overflow = '';
+      if (commentSSE) { commentSSE.close(); commentSSE = null; }
+    };
+
+    // === Lightbox (Fullscreen Zoom) ===
+    let lightboxZoom = 1, lightboxPanX = 0, lightboxPanY = 0;
+    let lbDragging = false, lbDragStartX = 0, lbDragStartY = 0;
+    let touchStartDist = 0, touchStartZoom = 1;
+
+    window.openLightbox = function(index) {
+      currentGalleryIndex = index;
+      lightboxZoom = 1; lightboxPanX = 0; lightboxPanY = 0;
+
+      let overlay = document.getElementById('lightboxOverlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'lightboxOverlay';
+        overlay.className = 'lightbox-overlay';
+        overlay.innerHTML = `
+          <button class="lightbox-close">✕</button>
+          <button class="lightbox-nav lightbox-prev">◀</button>
+          <button class="lightbox-nav lightbox-next">▶</button>
+          <div class="lightbox-img-wrap"><img id="lightboxImg" src="" alt="" draggable="false"></div>
+          <div class="lightbox-counter" id="lightboxCounter"></div>
+          <div class="lightbox-zoom-controls">
+            <button class="zoom-btn" id="zoomIn">＋</button>
+            <span class="zoom-level" id="zoomLevel">100%</span>
+            <button class="zoom-btn" id="zoomOut">−</button>
+          </div>`;
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+        document.addEventListener('keydown', e => {
+          if (!document.getElementById('lightboxOverlay')?.classList.contains('active')) return;
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowRight') lightboxNext();
+          if (e.key === 'ArrowLeft') lightboxPrev();
+        });
+        overlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        overlay.querySelector('.lightbox-prev').addEventListener('click', lightboxPrev);
+        overlay.querySelector('.lightbox-next').addEventListener('click', lightboxNext);
+        document.getElementById('zoomIn').addEventListener('click', () => zoomLightbox(0.25));
+        document.getElementById('zoomOut').addEventListener('click', () => zoomLightbox(-0.25));
+
+        const imgWrap = overlay.querySelector('.lightbox-img-wrap');
+        imgWrap.addEventListener('wheel', e => { e.preventDefault(); zoomLightbox(e.deltaY > 0 ? -0.1 : 0.1); }, { passive: false });
+
+        const img = document.getElementById('lightboxImg');
+        img.addEventListener('mousedown', startLbPan);
+        document.addEventListener('mousemove', moveLbPan);
+        document.addEventListener('mouseup', endLbPan);
+
+        img.addEventListener('touchstart', e => {
+          if (e.touches.length === 2) {
+            touchStartDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+            touchStartZoom = lightboxZoom;
+          } else if (e.touches.length === 1) {
+            lbDragging = true; lbDragStartX = e.touches[0].clientX - lightboxPanX; lbDragStartY = e.touches[0].clientY - lightboxPanY;
+          }
+        }, { passive: true });
+        img.addEventListener('touchmove', e => {
+          if (e.touches.length === 2) {
+            const dist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+            const newZoom = touchStartZoom * (dist / touchStartDist);
+            lightboxZoom = Math.max(1, Math.min(5, newZoom));
+            updateLbTransform();
+          } else if (e.touches.length === 1 && lbDragging) {
+            lightboxPanX = e.touches[0].clientX - lbDragStartX; lightboxPanY = e.touches[0].clientY - lbDragStartY;
+            updateLbTransform();
+          }
+        }, { passive: true });
+        img.addEventListener('touchend', () => { lbDragging = false; });
+      }
+      renderLightboxImage();
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    function renderLightboxImage() {
+      const ov = document.getElementById('lightboxOverlay');
+      if (!ov) return;
+      document.getElementById('lightboxImg').src = projectImages[currentGalleryIndex] || '';
+      ov.querySelector('.lightbox-prev').style.display = currentGalleryIndex === 0 ? 'none' : 'flex';
+      ov.querySelector('.lightbox-next').style.display = currentGalleryIndex === projectImages.length - 1 ? 'none' : 'flex';
+      document.getElementById('lightboxCounter').textContent = (currentGalleryIndex + 1) + ' / ' + projectImages.length;
+      lightboxZoom = 1; lightboxPanX = 0; lightboxPanY = 0;
+      updateLbTransform();
+    }
+
+    function updateLbTransform() {
+      const img = document.getElementById('lightboxImg');
+      if (!img) return;
+      img.style.transform = 'translate(' + lightboxPanX + 'px, ' + lightboxPanY + 'px) scale(' + lightboxZoom + ')';
+      const zl = document.getElementById('zoomLevel');
+      if (zl) zl.textContent = Math.round(lightboxZoom * 100) + '%';
+    }
+
+    function zoomLightbox(delta) {
+      lightboxZoom = Math.max(1, Math.min(5, lightboxZoom + delta));
+      if (lightboxZoom === 1) { lightboxPanX = 0; lightboxPanY = 0; }
+      updateLbTransform();
+    }
+
+    function startLbPan(e) {
+      if (lightboxZoom <= 1) return;
+      lbDragging = true; lbDragStartX = e.clientX - lightboxPanX; lbDragStartY = e.clientY - lightboxPanY;
+      document.getElementById('lightboxImg').style.cursor = 'grabbing';
+    }
+    function moveLbPan(e) {
+      if (!lbDragging) return;
+      lightboxPanX = e.clientX - lbDragStartX; lightboxPanY = e.clientY - lbDragStartY;
+      updateLbTransform();
+    }
+    function endLbPan() {
+      lbDragging = false;
+      const img = document.getElementById('lightboxImg');
+      if (img) img.style.cursor = 'grab';
+    }
+
+    window.lightboxPrev = function() { if (currentGalleryIndex > 0) { currentGalleryIndex--; renderLightboxImage(); } };
+    window.lightboxNext = function() { if (currentGalleryIndex < projectImages.length - 1) { currentGalleryIndex++; renderLightboxImage(); } };
+    window.closeLightbox = function() {
+      const ov = document.getElementById('lightboxOverlay');
+      if (ov) ov.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    // SSE للتحديث المباشر
+    function connectCommentSSE() {
+      if (commentSSE) commentSSE.close();
+      if (!('EventSource' in window)) return;
+      commentSSE = new EventSource('/api/comments/stream');
+      commentSSE.onmessage = function(e) {
+        try {
+          const msg = JSON.parse(e.data);
+          if (msg.type === 'update' && msg.targetType === 'project' && msg.targetIndex === commentTargetIndex) {
+            loadComments();
+          }
+        } catch {}
+      };
+      commentSSE.onerror = function() { /* تجاهل الخطأ */ };
+    }
+
+    // تحميل التعليقات
+    async function loadComments() {
+      try {
+        const res = await fetch(`/api/comments/project/${commentTargetIndex}`);
+        const data = await res.json();
+        if (!data.success) return;
+
+        const container = document.getElementById('commentsList');
+        const total = document.getElementById('commentTotal');
+        total.textContent = `(${data.data.length})`;
+
+        if (!data.data.length) {
+          container.innerHTML = '<p style="color:var(--gray);text-align:center;padding:20px;font-size:0.9rem;">لا توجد تعليقات بعد. كن أول من يعلق!</p>';
+          return;
+        }
+
+        const token = getUserToken();
+        const adminToken = getToken();
+
+        container.innerHTML = data.data.map(c => renderComment(c, token, adminToken)).join('');
+
+        // إعادة ربط الأحداث (لأن innerHTML يمسح event listeners)
+        data.data.forEach(c => {
+          attachCommentEvents(c.id);
+          if (c.replies) c.replies.forEach(r => attachCommentEvents(r.id));
+        });
+
+        // تحديث عدد التعليقات
+        const countEl = document.querySelector(`.comment-count[data-project="${commentTargetIndex}"] .count-num`);
+        if (countEl) countEl.textContent = data.data.length;
+
+      } catch (err) {
+        document.getElementById('commentsList').innerHTML = '<p style="color:#ff8c8c;text-align:center;">خطأ في تحميل التعليقات</p>';
+      }
+    }
+
+    function renderComment(c, token, adminToken) {
+      const likes = c.likes || [];
+      const reactions = ['👍','❤️','😂'];
+      const pinned = c.is_pinned ? '<span class="badge-pin">📌 مثبت</span>' : '';
+      const userReaction = token ? likes.find(l => l.userId !== undefined) : null;
+      const isOwner = token && c.user_id === token;
+
+      const reactionsHtml = reactions.map(e => {
+        const count = likes.filter(l => l.emoji === e).length;
+        const active = likes.some(l => l.userId && l.emoji === e);
+        return `<button class="reaction-btn${active ? ' active' : ''}" onclick="toggleReaction(${c.id},'${e}')" title="${e}">${e} ${count || ''}</button>`;
+      }).join('');
+
+      // الردود
+      const repliesHtml = c.replies && c.replies.length
+        ? c.replies.map(r => {
+            const rLikes = r.likes || [];
+            const rReactions = reactions.map(e => {
+              const count = rLikes.filter(l => l.emoji === e).length;
+              const active = rLikes.some(l => l.userId && l.emoji === e);
+              return `<button class="reaction-btn${active ? ' active' : ''}" onclick="toggleReaction(${r.id},'${e}')">${e} ${count || ''}</button>`;
+            }).join('');
+            return `<div class="comment-item reply">
+              <div><span class="comment-avatar">${r.user_name ? r.user_name.charAt(0) : '?'}</span><span class="comment-name">${escapeHTML(r.user_name || 'مستخدم')}</span><span class="comment-time">${relativeTime(r.created_at)}</span></div>
+              <div class="comment-content">${escapeHTML(r.content)}</div>
+              <div class="comment-actions">
+                <span class="reactions-wrap">${rReactions}</span>
+                ${token ? `<button onclick="showReplyForm(${c.id})">↩ رد</button>` : ''}
+                ${(isOwner || adminToken) ? `<button onclick="deleteComment(${r.id})" style="color:#ff8c8c;">🗑️</button>` : ''}
+              </div>
+            </div>`;
+          }).join('')
+        : '';
+
+      return `<div class="comment-item${c.is_pinned ? ' pinned' : ''}" id="comment-${c.id}">
+        <div>
+          <span class="comment-avatar">${c.user_name ? c.user_name.charAt(0) : '?'}</span>
+          <span class="comment-name">${escapeHTML(c.user_name || 'مستخدم')}</span>
+          <span class="comment-time">${relativeTime(c.created_at)}</span>
+          ${pinned}
+        </div>
+        <div class="comment-content">${escapeHTML(c.content)}</div>
+        <div class="comment-actions">
+          <span class="reactions-wrap">${reactionsHtml}</span>
+          ${token ? `<button onclick="showReplyForm(${c.id})">↩ رد</button>` : ''}
+          ${adminToken ? `<button onclick="pinComment(${c.id})">📌</button>` : ''}
+          ${(isOwner || adminToken) ? `<button onclick="deleteComment(${c.id})" style="color:#ff8c8c;">🗑️</button>` : ''}
+        </div>
+        <div class="reply-form-wrap" id="replyForm-${c.id}">
+          <textarea placeholder="اكتب ردك..." id="replyInput-${c.id}"></textarea>
+          <button class="btn btn-gold" style="font-size:0.8rem;padding:5px 15px;" onclick="submitReply(${c.id})">↩ إرسال الرد</button>
+        </div>
+        ${repliesHtml}
+      </div>`;
+    }
+
+    function attachCommentEvents(id) { /* nothing needed, onclick used */ }
+
+    // إظهار نموذج الرد
+    window.showReplyForm = function(id) {
+      const form = document.getElementById('replyForm-' + id);
+      if (form) form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    };
+
+    // إرسال تعليق
+    window.submitComment = async function() {
+      const input = document.getElementById('commentInput');
+      const content = input.value.trim();
+      if (!content) return;
+      const token = getUserToken();
+      if (!token) { showToast('⚠️ سجل دخول أولاً'); return; }
+      try {
+        const res = await fetch(`/api/comments/project/${commentTargetIndex}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ content })
+        });
+        const data = await res.json();
+        if (data.success) {
+          input.value = '';
+          showToast('✅ تم إضافة تعليقك');
+          loadComments();
+        } else {
+          showToast('❌ ' + (data.error || 'فشل'));
+        }
+      } catch { showToast('❌ خطأ في الاتصال'); }
+    };
+
+    // إرسال رد
+    window.submitReply = async function(parentId) {
+      const input = document.getElementById('replyInput-' + parentId);
+      const content = input.value.trim();
+      if (!content) return;
+      const token = getUserToken();
+      if (!token) { showToast('⚠️ سجل دخول أولاً'); return; }
+      try {
+        const res = await fetch(`/api/comments/${parentId}/reply`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ content })
+        });
+        const data = await res.json();
+        if (data.success) {
+          input.value = '';
+          document.getElementById('replyForm-' + parentId).style.display = 'none';
+          showToast('✅ تم إضافة الرد');
+          loadComments();
+        } else {
+          showToast('❌ ' + (data.error || 'فشل'));
+        }
+      } catch { showToast('❌ خطأ في الاتصال'); }
+    };
+
+    // تفاعل
+    window.toggleReaction = async function(commentId, emoji) {
+      const token = getUserToken();
+      if (!token) { showToast('⚠️ سجل دخول أولاً'); return; }
+      try {
+        await fetch(`/api/comments/${commentId}/like`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ emoji })
+        });
+        loadComments();
+      } catch { showToast('❌ خطأ'); }
+    };
+
+    // حذف تعليق
+    window.deleteComment = async function(id) {
+      if (!confirm('حذف التعليق؟')) return;
+      const token = getUserToken() || getToken();
+      if (!token) return;
+      try {
+        await fetch(`/api/comments/${id}`, {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        showToast('✅ تم الحذف');
+        loadComments();
+      } catch { showToast('❌ خطأ'); }
+    };
+
+    // تثبيت تعليق (للمشرف)
+    window.pinComment = async function(id) {
+      const token = getToken();
+      if (!token) { showToast('⚠️ غير مصرح'); return; }
+      try {
+        await fetch(`/api/comments/${id}/pin`, {
+          method: 'POST',
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        loadComments();
+      } catch { showToast('❌ خطأ'); }
+    };
+
+    // ========== Build sections ==========
+    function buildStats() {
+      if (!CONFIG || !CONFIG.stats) return;
+      const statsMap = { projects: 'مشروع', years: 'عام خبرة', clients: 'عميل', engineers: 'مهندس' };
+      const s = CONFIG.stats;
+      document.getElementById('statsRow').innerHTML = Object.entries({
+        projects: s.projects, years: s.years, clients: s.clients, engineers: s.engineers
+      }).map(([k, v]) =>
+        `<div class="stat-card"><div class="stat-number" data-target="${v}" data-suffix="${k === 'years' ? '' : '+'}">0</div><div class="stat-label">${statsMap[k]}</div></div>`
+      ).join('');
+      // تشغيل أنيميشن العد عند الظهور
+      requestAnimationFrame(() => animateStats());
+    }
+    let statsAnimated = false;
+    function animateStats() {
+      if (statsAnimated) return;
+      const cards = document.querySelectorAll('#statsRow .stat-card');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const numEl = entry.target.querySelector('.stat-number');
+            const target = parseInt(numEl.dataset.target) || 0;
+            const suffix = numEl.dataset.suffix || '';
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) { current = target; clearInterval(timer); }
+              numEl.textContent = current + suffix;
+            }, 40);
+            observer.unobserve(entry.target);
+            statsAnimated = true;
+          }
+        });
+      }, { threshold: 0.3 });
+      cards.forEach(c => observer.observe(c));
+    }
+
+    function buildServices() {
+      if (!CONFIG || !CONFIG.services) return;
+      document.getElementById('servicesGrid').innerHTML = CONFIG.services.map(s =>
+        `<div class="service-card"><div class="service-icon-wrap"><i class="fas ${escapeHTML(s.icon)}"></i></div><h4>${escapeHTML(s.title)}</h4><p>${escapeHTML(s.desc)}</p></div>`
+      ).join('');
+    }
+
+    function buildProjects() {
+      if (!CONFIG || !CONFIG.projects) return;
+      document.getElementById('projectsGrid').innerHTML = CONFIG.projects.map((p, i) => {
+        const cover = p.images?.length ? p.images[0] : '';
+        const imgTag = cover
+          ? `<img src="${escapeHTML(cover)}" alt="${escapeHTML(p.title)}">`
+          : `<svg class="project-icon" viewBox="0 0 100 100"><rect x="20" y="40" width="60" height="45" fill="none" stroke="%23c9a84c" stroke-width="4"/></svg>`;
+        const multiBadge = p.images?.length > 1 ? `<span class="multi-img-badge"><i class="far fa-images"></i> ${p.images.length}</span>` : '';
+        return `<div class="project-card" onclick="openProjectModal(${i})" role="button" tabindex="0" style="cursor:pointer;">
+          <div class="project-thumb">${imgTag}${multiBadge}<span class="project-tag">${escapeHTML(p.tag)}</span></div>
+          <div class="project-info"><h4>${escapeHTML(p.title)}</h4><p>${escapeHTML(p.desc)}</p>
+            <span class="comment-count" data-project="${i}" style="font-size:0.75rem;color:var(--gray);"><i class="far fa-comment"></i> <span class="count-num">0</span></span>
+          </div></div>`;
+      }).join('');
+      loadCommentCounts();
+    }
+
+    function buildTestimonials() {
+      if (!CONFIG || !CONFIG.testimonials) return;
+      document.getElementById('testimonialsGrid').innerHTML = CONFIG.testimonials.map(t => {
+        const stars = t.stars > 0 ? '<i class="fas fa-star" style="color:var(--gold);"></i>'.repeat(t.stars) : '<span style="color:#666;font-size:0.8rem;">لم يتم التقييم</span>';
+        return `<div class="testimonial-card"><div>${stars}</div><p>"${escapeHTML(t.text)}"</p><strong>${escapeHTML(t.name)}</strong></div>`;
+      }).join('');
+    }
+
+    function buildFeatures() {
+      if (!CONFIG || !CONFIG.features) return;
+      document.getElementById('featuresGrid').innerHTML = CONFIG.features.map(f =>
+        `<div class="feature-card"><div class="feature-icon"><i class="fas ${escapeHTML(f.icon)}"></i></div><h4>${escapeHTML(f.title)}</h4><p>${escapeHTML(f.desc)}</p></div>`
+      ).join('');
+    }
+
+    function buildSocial() {
+      if (!CONFIG || !CONFIG.social) return;
+      const s = CONFIG.social;
+      const links = [
+        { key: 'facebook', icon: 'fa-facebook-f', label: 'فيسبوك' },
+        { key: 'instagram', icon: 'fa-instagram', label: 'انستغرام' }
+      ];
+      document.getElementById('socialIcons').innerHTML = links.map(l => {
+        const url = s[l.key];
+        if (url) return `<a href="${escapeHTML(url)}" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="${l.label}"><i class="fab ${l.icon}"></i></a>`;
+        return `<button class="social-btn" onclick="showToast('قريباً إن شاء الله')" aria-label="${l.label} - قريباً"><i class="fab ${l.icon}"></i></button>`;
+      }).join('');
+    }
+
+    function observeReveal() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.service-card, .project-card, .stat-card, .feature-card').forEach(el => observer.observe(el));
+    }
+
+    // ========== Password Recovery ==========
+    function showRecover() {
+      const section = document.getElementById('recoverSection');
+      if (section.style.display === 'none') {
+        section.style.display = 'block';
+        document.getElementById('recoverEmail').style.display = 'block';
+        document.getElementById('recoverCode').style.display = 'none';
+        document.getElementById('newPasswordRecover').style.display = 'none';
+        document.getElementById('sendCodeBtn').style.display = 'block';
+        document.getElementById('verifyCodeBtn').style.display = 'none';
+        document.getElementById('recoverMessage').textContent = 'أدخل بريدك الإلكتروني لإرسال كود الاسترجاع:';
+        document.getElementById('recoverEmail').value = CONFIG.email || '';
+      } else {
+        section.style.display = 'none';
+      }
+    }
+
+    async function sendResetCode() {
+      const email = document.getElementById('recoverEmail').value.trim();
+      const errEl = document.getElementById('passwordError');
+      if (!email) { errEl.textContent = 'أدخل البريد الإلكتروني'; errEl.style.display = 'block'; return; }
+      errEl.style.display = 'none';
+      try {
+        const result = await apiPost('/admin/send-reset-code', { email });
+        if (result.success) {
+          document.getElementById('recoverMessage').textContent = '✅ تم إرسال الكود! تفقد بريدك الإلكتروني:';
+          document.getElementById('recoverEmail').style.display = 'none';
+          document.getElementById('sendCodeBtn').style.display = 'none';
+          document.getElementById('recoverCode').style.display = 'block';
+          document.getElementById('newPasswordRecover').style.display = 'block';
+          document.getElementById('verifyCodeBtn').style.display = 'block';
+          document.getElementById('recoverCode').focus();
+          document.getElementById('codeSentMsg').textContent = result.message || 'تم إرسال كود التحقق';
+          document.getElementById('codeSentMsg').style.display = 'block';
+        } else {
+          errEl.textContent = result.error || 'فشل الإرسال';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'خطأ في الاتصال';
+        errEl.style.display = 'block';
+      }
+    }
+
+    async function verifyResetCode() {
+      const code = document.getElementById('recoverCode').value.trim();
+      const newPass = document.getElementById('newPasswordRecover').value;
+      const errEl = document.getElementById('passwordError');
+      if (!code || !newPass) { errEl.textContent = 'املأ جميع الحقول'; errEl.style.display = 'block'; return; }
+      if (newPass.length < 6) { errEl.textContent = 'كلمة المرور الجديدة 6 أحرف على الأقل'; errEl.style.display = 'block'; return; }
+      try {
+        const result = await apiPost('/admin/verify-reset-code', { code, newPassword: newPass });
+        if (result.success) {
+          errEl.textContent = '✅ تم الاسترجاع! سجل دخول بكلمة المرور الجديدة';
+          errEl.style.color = '#4CAF50';
+          errEl.style.display = 'block';
+          document.getElementById('recoverSection').style.display = 'none';
+          document.getElementById('adminPassword').value = newPass;
+        } else {
+          errEl.textContent = result.error || 'فشل الاسترجاع';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'خطأ في الاتصال';
+        errEl.style.display = 'block';
+      }
+    }
+
+    // ========== Admin Login ==========
+    function openPasswordModal() {
+      document.getElementById('passwordModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('adminPassword').value = '';
+      document.getElementById('passwordError').style.display = 'none';
+      document.getElementById('userAuthError').style.display = 'none';
+      document.getElementById('userName').value = '';
+      document.getElementById('userPhone').value = '';
+      document.getElementById('userPassword').value = '';
+      switchAuthTab('user');
+      setTimeout(() => document.getElementById('userPhone').focus(), 100);
+    }
+
+    function closePasswordModal() {
+      document.getElementById('passwordModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    async function loginAdmin() {
+      const pass = document.getElementById('adminPassword').value;
+      const errEl = document.getElementById('passwordError');
+      try {
+        const result = await apiPost('/admin/login', { password: pass });
+        if (result.success) {
+          setToken(result.token);
+          closePasswordModal();
+          openAdminModal();
+        } else {
+          errEl.textContent = result.error || 'كلمة المرور غير صحيحة';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'فشل الاتصال بالسيرفر';
+        errEl.style.display = 'block';
+      }
+    }
+
+    // ========== Admin Panel ==========
+    async function openAdminModal() {
+      // التحقق من صحة التوكن
+      try {
+        const verify = await apiPostAuth('/admin/verify', {});
+        if (!verify.valid) {
+          clearToken();
+          showToast('⚠️ انتهت صلاحية الجلسة');
+          return;
+        }
+      } catch (err) {
+        clearToken();
+        showToast('⚠️ يجب تسجيل الدخول أولاً');
+        return;
+      }
+
+      document.getElementById('adminModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      renderAdminTab('general');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('adminTabs').addEventListener('click', function(e) {
+      if (e.target.classList.contains('admin-tab-btn')) {
+        this.querySelectorAll('.admin-tab-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        renderAdminTab(e.target.dataset.adminTab);
+      }
+    });
+
+    function renderAdminTab(tab) {
+      if (!CONFIG) { document.getElementById('adminContent').innerHTML = '<p>جاري تحميل البيانات...</p>'; return; }
+      const container = document.getElementById('adminContent');
+      switch (tab) {
+        case 'general': container.innerHTML = renderGeneralForm(); break;
+        case 'stats': container.innerHTML = renderStatsForm(); break;
+        case 'services': container.innerHTML = renderServicesForm(); break;
+        case 'projects': container.innerHTML = renderProjectsForm(); break;
+        case 'testimonials': container.innerHTML = renderTestimonialsForm(); break;
+        case 'features': container.innerHTML = renderFeaturesForm(); break;
+        case 'social': container.innerHTML = renderSocialForm(); break;
+        case 'messages': container.innerHTML = '<p>جاري تحميل الرسائل...</p>'; loadMessages(); break;
+        case 'password': container.innerHTML = renderPasswordForm(); break;
+        case 'reset': container.innerHTML = renderResetForm(); break;
+      }
+    }
+
+    // ========== Admin forms ==========
+    function renderGeneralForm() {
+      return `<div class="admin-card"><h3>الإعدادات العامة</h3>
+        <div class="admin-form-row">
+          <div class="admin-form-group"><label>اسم المدير</label><input id="adm_manager" value="${escapeHTML(CONFIG.manager)}"></div>
+          <div class="admin-form-group"><label>رقم الهاتف</label><input id="adm_phone" value="${escapeHTML(CONFIG.phone)}"></div>
+          <div class="admin-form-group"><label>الواتساب (بدون +)</label><input id="adm_whatsapp" value="${escapeHTML(CONFIG.whatsapp)}"></div>
+          <div class="admin-form-group"><label>البريد</label><input id="adm_email" value="${escapeHTML(CONFIG.email)}"></div>
+          <div class="admin-form-group"><label>العنوان</label><input id="adm_address" value="${escapeHTML(CONFIG.address)}"></div>
+        </div>
+        <button class="admin-btn admin-btn-gold" onclick="saveGeneral()">💾 حفظ</button>
+      </div>
+      <div class="admin-card" style="margin-top:10px;">
+        <h4 style="color:var(--gold); cursor:pointer;" onclick="toggleSmtp()">📧 إعدادات SMTP <span id="smtpToggle">+</span></h4>
+        <div id="smtpFields" style="display:none;">
+          <p style="color:#aaa; font-size:0.85rem; margin-bottom:10px;">مطلوب لإرسال كود استرجاع كلمة المرور عبر الإيميل.</p>
+          <div class="admin-form-row">
+            <div class="admin-form-group"><label>خادم SMTP</label><input id="adm_smtp_host" value="${escapeHTML(CONFIG.smtp_host || '')}" placeholder="smtp.gmail.com"></div>
+            <div class="admin-form-group"><label>المنفذ</label><input id="adm_smtp_port" value="${escapeHTML(CONFIG.smtp_port || '587')}"></div>
+            <div class="admin-form-group"><label>اسم المستخدم</label><input id="adm_smtp_user" value="${escapeHTML(CONFIG.smtp_user || '')}" placeholder="user@gmail.com"></div>
+            <div class="admin-form-group"><label>كلمة مرور SMTP</label><input type="password" id="adm_smtp_pass" value="${escapeHTML(CONFIG.smtp_pass || '')}" placeholder="App Password"></div>
+            <div class="admin-form-group"><label>من (From)</label><input id="adm_smtp_from" value="${escapeHTML(CONFIG.smtp_from || '')}" placeholder="info@albayariq.sy"></div>
+          </div>
+          <button class="admin-btn" style="background:#444;color:#fff;" onclick="saveSmtp()">💾 حفظ إعدادات SMTP</button>
+          <button class="admin-btn" style="background:#444;color:#fff;margin-right:8px;" onclick="testSmtp()">📨 اختبار الإرسال</button>
+          <p id="smtpStatus" style="margin-top:8px; color:#aaa; display:none;"></p>
+        </div>
+      </div>`;
+    }
+    window.toggleSmtp = function() {
+      const fields = document.getElementById('smtpFields');
+      const toggle = document.getElementById('smtpToggle');
+      fields.style.display = fields.style.display === 'none' ? 'block' : 'none';
+      toggle.textContent = fields.style.display === 'none' ? '+' : '−';
+    };
+    window.saveGeneral = function() {
+      CONFIG.manager = document.getElementById('adm_manager').value;
+      CONFIG.phone = document.getElementById('adm_phone').value;
+      CONFIG.whatsapp = document.getElementById('adm_whatsapp').value;
+      CONFIG.email = document.getElementById('adm_email').value;
+      CONFIG.address = document.getElementById('adm_address').value;
+      saveConfig();
+    };
+    window.saveSmtp = function() {
+      CONFIG.smtp_host = document.getElementById('adm_smtp_host').value;
+      CONFIG.smtp_port = document.getElementById('adm_smtp_port').value;
+      CONFIG.smtp_user = document.getElementById('adm_smtp_user').value;
+      CONFIG.smtp_pass = document.getElementById('adm_smtp_pass').value;
+      CONFIG.smtp_from = document.getElementById('adm_smtp_from').value;
+      saveConfig();
+    };
+    window.testSmtp = async function() {
+      const statusEl = document.getElementById('smtpStatus');
+      statusEl.style.display = 'block';
+      statusEl.textContent = '⏳ جاري إرسال إيميل اختباري...';
+      statusEl.style.color = '#aaa';
+      try {
+        const result = await apiPostAuth('/admin/send-reset-code', {});
+        if (result.success) {
+          statusEl.textContent = '✅ ' + (result.message || 'تم إرسال الإيميل بنجاح');
+          statusEl.style.color = '#4caf50';
+        } else {
+          statusEl.textContent = '❌ ' + (result.error || 'فشل الإرسال');
+          statusEl.style.color = '#ff8c8c';
+        }
+      } catch (e) {
+        statusEl.textContent = '❌ فشل الاتصال';
+        statusEl.style.color = '#ff8c8c';
+      }
+    };
+
+    function renderStatsForm() {
+      const s = CONFIG.stats || {};
+      return `<div class="admin-card"><h3>الإحصائيات</h3>
+        <div class="admin-form-row">
+          <div class="admin-form-group"><label>مشاريع</label><input id="adm_projects" type="number" value="${s.projects || 0}"></div>
+          <div class="admin-form-group"><label>سنوات خبرة</label><input id="adm_years" type="number" value="${s.years || 0}"></div>
+          <div class="admin-form-group"><label>عملاء</label><input id="adm_clients" type="number" value="${s.clients || 0}"></div>
+          <div class="admin-form-group"><label>مهندسين</label><input id="adm_engineers" type="number" value="${s.engineers || 0}"></div>
+        </div>
+        <button class="admin-btn admin-btn-gold" onclick="saveStats()">💾 حفظ</button>
+      </div>`;
+    }
+    window.saveStats = function() {
+      CONFIG.stats = {
+        projects: +document.getElementById('adm_projects').value,
+        years: +document.getElementById('adm_years').value,
+        clients: +document.getElementById('adm_clients').value,
+        engineers: +document.getElementById('adm_engineers').value
+      };
+      saveConfig();
+    };
+
+    function renderServicesForm() {
+      let html = '<div class="admin-card"><h3>الخدمات</h3>';
+      (CONFIG.services || []).forEach((s, i) => {
+        html += `<div class="admin-item admin-flex-between">
+          <div><i class="fas ${escapeHTML(s.icon)}" style="color:var(--gold);"></i></div>
+          <div style="flex:2;"><input value="${escapeHTML(s.title)}" onchange="updateService(${i},'title',this.value)"></div>
+          <div style="flex:3;"><input value="${escapeHTML(s.desc)}" onchange="updateService(${i},'desc',this.value)"></div>
+          <div style="width:100px;"><input value="${escapeHTML(s.icon)}" onchange="updateService(${i},'icon',this.value)"></div>
+        </div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+    window.updateService = function(i, f, v) { CONFIG.services[i][f] = v; saveConfig(); };
+
+    function renderProjectsForm() {
+      let html = '<div class="admin-card"><div class="admin-flex-between"><h3>المشاريع</h3><button class="admin-btn admin-btn-gold" onclick="addProject()">+ مشروع جديد</button></div>';
+      (CONFIG.projects || []).forEach((p, i) => {
+        const cover = p.images?.length ? p.images[0] : '';
+        html += `<div class="admin-item admin-flex-between" style="margin:6px 0;">
+          <div style="width:50px;height:50px;border-radius:8px;overflow:hidden;background:#1a1a1a;flex-shrink:0;">
+            ${cover ? `<img src="${escapeHTML(cover)}" style="width:100%;height:100%;object-fit:cover;">` : '📷'}
+          </div>
+          <div style="flex:1;padding:0 10px;font-weight:600;">${escapeHTML(p.title)}</div>
+          <div style="color:var(--gray);font-size:0.75rem;">${p.images?.length || 0}/7</div>
+          <button class="admin-btn admin-btn-gold" onclick="openProjectEditModal(${i})"><i class="fas fa-edit"></i> تعديل</button>
+          <button class="admin-btn admin-btn-danger" onclick="deleteProject(${i})"><i class="fas fa-trash"></i></button>
+        </div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+    window.addProject = function() {
+      CONFIG.projects.push({ images: [], tag: 'جديد', title: 'مشروع جديد', desc: 'وصف المشروع' });
+      saveConfig();
+      renderAdminTab('projects');
+      setTimeout(() => openProjectEditModal(CONFIG.projects.length - 1), 100);
+    };
+    window.deleteProject = function(i) {
+      if (confirm('حذف المشروع؟')) { CONFIG.projects.splice(i, 1); saveConfig(); renderAdminTab('projects'); }
+    };
+
+    // === Project Edit Modal (Multi-Image) ===
+    window.openProjectEditModal = function(index) {
+      const p = CONFIG.projects[index];
+      if (!p) return;
+      const overlay = document.createElement('div');
+      overlay.className = 'project-edit-overlay';
+      const images = p.images || [];
+      overlay.innerHTML = `
+        <div class="project-edit-modal">
+          <div class="project-edit-header">
+            <h3>✏️ تحرير المشروع</h3>
+            <button class="project-edit-close" onclick="this.closest('.project-edit-overlay').remove()">✕</button>
+          </div>
+          <div class="project-edit-body">
+            <div class="image-grid" id="projEditGrid">
+              ${images.map((img, i) => `
+                <div class="image-grid-item" draggable="true" data-index="${i}">
+                  <img src="${escapeHTML(img)}" alt="">
+                  <button class="img-del-btn" onclick="removeProjectImg(${index},${i})">✕</button>
+                  ${i === 0 ? '<span class="img-cover-badge">الرئيسية</span>' : ''}
+                </div>
+              `).join('')}
+              ${images.length < 7 ? `
+                <div class="image-grid-add" onclick="document.getElementById('projEditFileInput').click()">
+                  <span>+</span>
+                  <small style="margin-top:4px;">${images.length}/7</small>
+                </div>
+              ` : ''}
+            </div>
+            <p style="color:var(--gray);font-size:0.8rem;margin:0 0 15px 0;">
+              <i class="fas fa-info-circle"></i> اسحب الصور لترتيبها • أول صورة هي الرئيسية • الحد الأقصى 7 صور
+            </p>
+            <input type="file" id="projEditFileInput" accept="image/*" multiple style="display:none" onchange="uploadProjectImages(${index}, this)">
+            <button class="admin-btn admin-btn-gold" onclick="document.getElementById('projEditFileInput').click()" style="margin-bottom:15px;font-size:0.85rem;">
+              <i class="fas fa-plus"></i> إضافة صور
+            </button>
+            <div class="project-edit-fields">
+              <label>العنوان</label>
+              <input id="projEditTitle" value="${escapeHTML(p.title)}">
+              <label>الوصف</label>
+              <textarea id="projEditDesc" rows="3">${escapeHTML(p.desc || '')}</textarea>
+              <label>الوسم (tag)</label>
+              <input id="projEditTag" value="${escapeHTML(p.tag || '')}">
+            </div>
+          </div>
+          <div class="project-edit-footer">
+            <button class="admin-btn admin-btn-gold" onclick="saveProjectEdit(${index})">💾 حفظ</button>
+            <button class="admin-btn" onclick="this.closest('.project-edit-overlay').remove()">إلغاء</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+      // Drag & Drop reorder
+      const grid = document.getElementById('projEditGrid');
+      let dragItem = null;
+      grid.addEventListener('dragstart', e => {
+        dragItem = e.target.closest('.image-grid-item');
+        if (dragItem) dragItem.style.opacity = '0.5';
+      });
+      grid.addEventListener('dragend', e => {
+        if (dragItem) dragItem.style.opacity = '1';
+        document.querySelectorAll('.image-grid-item').forEach(el => el.style.borderColor = 'transparent');
+      });
+      grid.addEventListener('dragover', e => {
+        e.preventDefault();
+        const target = e.target.closest('.image-grid-item');
+        if (target && target !== dragItem) {
+          document.querySelectorAll('.image-grid-item').forEach(el => el.style.borderColor = 'transparent');
+          target.style.borderColor = 'var(--gold)';
+        }
+      });
+      grid.addEventListener('drop', e => {
+        e.preventDefault();
+        const target = e.target.closest('.image-grid-item');
+        if (target && dragItem && target !== dragItem) {
+          const from = parseInt(dragItem.dataset.index);
+          const to = parseInt(target.dataset.index);
+          const item = CONFIG.projects[index].images.splice(from, 1)[0];
+          CONFIG.projects[index].images.splice(to, 0, item);
+          saveConfig();
+          openProjectEditModal(index);
+        }
+      });
+    };
+
+    window.removeProjectImg = function(projIdx, imgIdx) {
+      const p = CONFIG.projects[projIdx];
+      if (!p?.images?.length) return;
+      if (p.images.length <= 1) { showToast('❌ يجب أن يبقى على الأقل صورة واحدة'); return; }
+      p.images.splice(imgIdx, 1);
+      saveConfig();
+      openProjectEditModal(projIdx);
+    };
+
+    window.uploadProjectImages = async function(projIdx, input) {
+      const p = CONFIG.projects[projIdx];
+      if (!p) return;
+      const maxAdd = 7 - (p.images?.length || 0);
+      const files = Array.from(input.files).slice(0, maxAdd);
+      if (!files.length) return;
+      let uploaded = 0;
+      for (const file of files) {
+        if (!file.type.startsWith('image/')) continue;
+        if (file.size > 5 * 1024 * 1024) { showToast(`❌ ${file.name} كبيرة (حد 5MB)`); continue; }
+        try {
+          const dataUrl = await new Promise(r => { const fr = new FileReader(); fr.onload = () => r(fr.result); fr.readAsDataURL(file); });
+          const token = getToken();
+          const res = await fetch('/api/upload', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ imageData: dataUrl })
+          });
+          const result = await res.json();
+          if (result.success) {
+            if (!p.images) p.images = [];
+            p.images.push(result.url);
+            uploaded++;
+          }
+        } catch {}
+      }
+      saveConfig();
+      input.value = '';
+      if (uploaded > 0) showToast(`✅ تم رفع ${uploaded} صورة`);
+      openProjectEditModal(projIdx);
+    };
+
+    window.saveProjectEdit = function(index) {
+      const p = CONFIG.projects[index];
+      if (!p) return;
+      const title = document.getElementById('projEditTitle');
+      const desc = document.getElementById('projEditDesc');
+      const tag = document.getElementById('projEditTag');
+      if (title) p.title = title.value.trim() || p.title;
+      if (desc) p.desc = desc.value.trim() || p.desc;
+      if (tag) p.tag = tag.value.trim() || p.tag;
+      saveConfig();
+      document.querySelector('.project-edit-overlay')?.remove();
+      renderAdminTab('projects');
+      buildProjects();
+      showToast('✅ تم حفظ المشروع');
+    };
+
+    function renderTestimonialsForm() {
+      let html = '<div class="admin-card"><div class="admin-flex-between"><h3>التقييمات</h3><button class="admin-btn admin-btn-gold" onclick="addTestimonial()">+ إضافة</button></div>';
+      (CONFIG.testimonials || []).forEach((t, i) => {
+        html += `<div class="admin-item admin-flex-between">
+          <div style="flex:2;"><input value="${escapeHTML(t.name)}" onchange="updateTestimonial(${i},'name',this.value)"></div>
+          <div style="flex:3;"><input value="${escapeHTML(t.text)}" onchange="updateTestimonial(${i},'text',this.value)"></div>
+          <div><input type="number" min="1" max="5" value="${t.stars}" style="width:60px;" onchange="updateTestimonial(${i},'stars',+this.value)"></div>
+          <button class="admin-btn admin-btn-danger" onclick="deleteTestimonial(${i})"><i class="fas fa-trash"></i></button>
+        </div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+    window.updateTestimonial = function(i, f, v) { CONFIG.testimonials[i][f] = v; saveConfig(); };
+    window.addTestimonial = function() { CONFIG.testimonials.push({ name: 'اسم', text: 'نص', stars: 5 }); saveConfig(); renderAdminTab('testimonials'); };
+    window.deleteTestimonial = function(i) { if (confirm('حذف التقييم؟')) { CONFIG.testimonials.splice(i, 1); saveConfig(); renderAdminTab('testimonials'); } };
+
+    function renderFeaturesForm() {
+      let html = '<div class="admin-card"><h3>لماذا نحن</h3>';
+      (CONFIG.features || []).forEach((f, i) => {
+        html += `<div class="admin-item admin-flex-between">
+          <div><i class="fas ${escapeHTML(f.icon)}" style="color:var(--gold);"></i></div>
+          <div style="flex:2;"><input value="${escapeHTML(f.title)}" onchange="updateFeature(${i},'title',this.value)"></div>
+          <div style="flex:3;"><input value="${escapeHTML(f.desc)}" onchange="updateFeature(${i},'desc',this.value)"></div>
+          <div><input value="${escapeHTML(f.icon)}" style="width:100px;" onchange="updateFeature(${i},'icon',this.value)"></div>
+        </div>`;
+      });
+      html += '</div>';
+      return html;
+    }
+    window.updateFeature = function(i, f, v) { CONFIG.features[i][f] = v; saveConfig(); };
+
+    function renderSocialForm() {
+      const s = CONFIG.social || {};
+      return `<div class="admin-card"><h3>روابط التواصل</h3>
+        <div class="admin-form-row">
+          <div class="admin-form-group"><label>فيسبوك</label><input id="adm_fb" value="${escapeHTML(s.facebook || '')}"></div>
+          <div class="admin-form-group"><label>انستغرام</label><input id="adm_ig" value="${escapeHTML(s.instagram || '')}"></div>
+        </div>
+        <button class="admin-btn admin-btn-gold" onclick="saveSocial()">💾 حفظ</button>
+      </div>`;
+    }
+    window.saveSocial = function() {
+      CONFIG.social = {
+        facebook: document.getElementById('adm_fb').value.trim(),
+        instagram: document.getElementById('adm_ig').value.trim()
+      };
+      saveConfig();
+    };
+
+    function renderPasswordForm() {
+      return `<div class="admin-card">
+        <h3>تغيير كلمة المرور</h3>
+        <div class="admin-form-row">
+          <div class="admin-form-group"><label>كلمة المرور القديمة</label><input type="password" id="adm_oldPass"></div>
+          <div class="admin-form-group"><label>كلمة المرور الجديدة</label><input type="password" id="adm_newPass1"></div>
+          <div class="admin-form-group"><label>تأكيد الجديدة</label><input type="password" id="adm_newPass2"></div>
+        </div>
+        <button class="admin-btn admin-btn-gold" onclick="changePassword()">🔒 تغيير كلمة المرور</button>
+        <p id="changePassError" style="color:#ff8c8c; margin-top:10px; display:none;"></p>
+      </div>`;
+    }
+    window.changePassword = async function() {
+      const oldPass = document.getElementById('adm_oldPass').value;
+      const newPass1 = document.getElementById('adm_newPass1').value;
+      const newPass2 = document.getElementById('adm_newPass2').value;
+      const errEl = document.getElementById('changePassError');
+      if (!oldPass || !newPass1) { errEl.textContent = 'جميع الحقول مطلوبة'; errEl.style.display = 'block'; return; }
+      if (newPass1.length < 6) { errEl.textContent = 'كلمة المرور الجديدة 6 أحرف على الأقل'; errEl.style.display = 'block'; return; }
+      if (newPass1 !== newPass2) { errEl.textContent = 'كلمتا المرور غير متطابقتين'; errEl.style.display = 'block'; return; }
+      try {
+        const result = await apiPostAuth('/admin/change-password', { oldPassword: oldPass, newPassword: newPass1 });
+        if (result.success) {
+          showToast('✅ تم تغيير كلمة المرور');
+          errEl.style.display = 'none';
+        } else {
+          errEl.textContent = result.error || 'فشل';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'خطأ في الاتصال';
+        errEl.style.display = 'block';
+      }
+    };
+
+    function renderResetForm() {
+      return `<div class="admin-card" style="text-align:center;">
+        <h3>إعادة تعيين / تصدير</h3>
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+          <button class="admin-btn admin-btn-danger" onclick="resetConfig()">⚠️ إعادة تعيين كامل</button>
+          <button class="admin-btn" style="background:#444;color:#fff;" onclick="exportConfig()">📥 تصدير (JSON)</button>
+        </div>
+      </div>`;
+    }
+    window.resetConfig = async function() {
+      if (!confirm('⚠️ هل أنت متأكد؟ سيتم حذف جميع التغييرات وإعادة الضبط للإعدادات الافتراضية.')) return;
+      if (!confirm('تأكيد نهائي؟ لا يمكن التراجع عن هذا الإجراء.')) return;
+      showToast('🔄 جاري إعادة الضبط...');
+      try {
+        const result = await apiPostAuth('/reset-config', {});
+        if (result.success) {
+          localStorage.removeItem('admin_token');
+          showToast('✅ تمت إعادة الضبط! إعادة تحميل...');
+          setTimeout(() => location.reload(), 1500);
+        } else {
+          showToast('❌ ' + (result.error || 'فشل'));
+        }
+      } catch (e) {
+        showToast('❌ فشل الاتصال');
+      }
+    };
+    window.exportConfig = function() {
+      const blob = new Blob([JSON.stringify(CONFIG, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'albayariq_backup.json';
+      a.click(); URL.revokeObjectURL(url);
+      showToast('📥 تم التصدير');
+    };
+
+    // ========== Contact Messages ==========
+    async function loadMessages() {
+      try {
+        const msgs = await apiPostAuth('/contact-messages', {});
+        const container = document.getElementById('adminContent');
+        if (!Array.isArray(msgs) || msgs.length === 0) {
+          container.innerHTML = '<div class="admin-card"><h3>الرسائل</h3><p>لا توجد رسائل بعد</p></div>';
+          return;
+        }
+        let html = '<div class="admin-card"><h3>الرسائل الواردة</h3>';
+        msgs.forEach(m => {
+          html += `<div class="admin-item" style="${m.read ? '' : 'border-right:3px solid var(--gold);'}">
+            <div class="admin-flex-between">
+              <div><strong>${escapeHTML(m.name)}</strong> <small style="color:#888;">${m.created_at}</small></div>
+              <div><button class="admin-btn ${m.read ? 'admin-btn-gold' : ''}" style="background:#444;color:#fff;" onclick="markRead(${m.id})">✓</button>
+              <button class="admin-btn admin-btn-danger" onclick="deleteMessage(${m.id})"><i class="fas fa-trash"></i></button></div>
+            </div>
+            <p style="color:#ccc;">📞 ${escapeHTML(m.phone)} | 📋 ${escapeHTML(m.service || '')}</p>
+            <p style="color:#aaa;">${escapeHTML(m.message || '')}</p>
+          </div>`;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+      } catch (err) {
+        document.getElementById('adminContent').innerHTML = '<div class="admin-card"><p>خطأ في تحميل الرسائل</p></div>';
+      }
+    }
+    window.markRead = async function(id) {
+      try { await apiPostAuth('/contact-messages/' + id + '/read', {}); loadMessages(); } catch (e) { showToast('❌ خطأ'); }
+    };
+    window.deleteMessage = async function(id) {
+      if (!confirm('حذف الرسالة؟')) return;
+      try { await fetch('/api/contact-messages/' + id, { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + getToken() } }); loadMessages(); } catch (e) { showToast('❌ خطأ'); }
+    };
+
+    // ========== Contact Form ==========
+    const contactForm = document.getElementById('contactForm');
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phoneError');
+
+    phoneInput.addEventListener('input', () => {
+      const isValid = /^(09)[0-9]{8}$/.test(phoneInput.value);
+      phoneInput.setCustomValidity(isValid ? '' : 'يجب أن يبدأ بـ 09 ويتكون من 10 أرقام');
+      phoneError.style.display = isValid ? 'none' : 'block';
+    });
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      if (!phoneInput.validity.valid) { phoneError.style.display = 'block'; return; }
+      const btn = contactForm.querySelector('.form-submit');
+      const originalText = btn.textContent;
+      btn.textContent = 'جارٍ الإرسال...';
+      btn.disabled = true;
+      try {
+        const result = await apiPost('/contact', {
+          name: document.getElementById('name').value,
+          phone: document.getElementById('phone').value,
+          service: document.getElementById('service').value,
+          message: document.getElementById('message').value
+        });
+        if (result.success) {
+          btn.textContent = '✅ تم الإرسال!';
+          contactForm.reset();
+          phoneError.style.display = 'none';
+        } else {
+          btn.textContent = '❌ خطأ، حاول مجدداً';
+        }
+      } catch (err) {
+        btn.textContent = '❌ خطأ في الاتصال';
+      } finally {
+        setTimeout(() => { btn.textContent = originalText; btn.style.background = ''; btn.disabled = false; }, 3000);
+      }
+    });
+
+    // ========== Modals ==========
+    // إغلاق الـ modals عند الضغط خارجها
+    document.querySelectorAll('#privacyModal, #passwordModal, #adminModal, #projectModal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+          if (modal.id === 'projectModal' && commentSSE) { commentSSE.close(); commentSSE = null; }
+        }
+      });
+    });
+    const privacyModal = document.getElementById('privacyModal');
+    window.togglePrivacyModal = () => {
+      privacyModal.classList.toggle('active');
+      document.body.style.overflow = privacyModal.classList.contains('active') ? 'hidden' : '';
+    };
+
+    // ========== User Token Management ==========
+    function getUserToken() { return localStorage.getItem('user_token'); }
+    function setUserToken(t) { localStorage.setItem('user_token', t); }
+    function clearUserToken() { localStorage.removeItem('user_token'); }
+
+    // التحقق من وجود token في الرابط (بعد تسجيل OAuth)
+    function handleLoginToken() {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('login');
+      if (token) {
+        if (token === 'error') {
+          showToast('❌ فشل تسجيل الدخول');
+        } else {
+          setUserToken(token);
+          showToast('✅ تم تسجيل الدخول');
+        }
+        // إزالة token من الرابط
+        const url = new URL(window.location);
+        url.searchParams.delete('login');
+        window.history.replaceState({}, '', url);
+        updateUserUI();
+      }
+    }
+
+    // تحديث واجهة المستخدم حسب حالة الدخول
+    async function updateUserUI() {
+      const btn = document.getElementById('navLoginBtn');
+      const token = getUserToken();
+      if (!token) {
+        if (btn) { btn.innerHTML = '<i class="fas fa-user"></i>'; btn.title = 'تسجيل الدخول'; btn.onclick = openPasswordModal; }
+        return;
+      }
+      try {
+        const res = await fetch('/api/user/status', {
+          method: 'POST',
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        const data = await res.json();
+        if (data.loggedIn && btn) {
+          btn.innerHTML = '<span style="font-size:1rem;">' + data.user.name.charAt(0) + '</span>';
+          btn.title = data.user.name + ' (' + data.user.phone + ')';
+          btn.style.width = '38px';
+          btn.style.fontSize = '0';
+          btn.style.fontWeight = '700';
+          btn.onclick = () => showToast('👤 ' + data.user.name);
+        } else {
+          clearUserToken();
+          if (btn) { btn.innerHTML = '<i class="fas fa-user"></i>'; btn.title = 'تسجيل الدخول'; btn.onclick = openPasswordModal; }
+        }
+      } catch {
+        // Ignore
+      }
+    }
+
+    // 🟢 تبديل التبويب بين دخول المستخدم والمشرف
+    window.switchAuthTab = function(tab) {
+      document.querySelectorAll('.auth-tab').forEach(t => {
+        t.style.color = 'var(--gray)';
+        t.style.borderBottomColor = 'transparent';
+      });
+      document.getElementById('tabUser').style.color = tab === 'user' ? 'var(--gold)' : 'var(--gray)';
+      document.getElementById('tabUser').style.borderBottomColor = tab === 'user' ? 'var(--gold)' : 'transparent';
+      document.getElementById('tabAdmin').style.color = tab === 'admin' ? 'var(--gold)' : 'var(--gray)';
+      document.getElementById('tabAdmin').style.borderBottomColor = tab === 'admin' ? 'var(--gold)' : 'transparent';
+      document.getElementById('authUserPanel').style.display = tab === 'user' ? 'block' : 'none';
+      document.getElementById('authAdminPanel').style.display = tab === 'admin' ? 'block' : 'none';
+    };
+
+    // 🟢 تسجيل مستخدم جديد
+    window.userRegister = async function() {
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      const password = document.getElementById('userPassword').value;
+      const errEl = document.getElementById('userAuthError');
+      if (!name || !phone || !password) { errEl.textContent = 'جميع الحقول مطلوبة'; errEl.style.display = 'block'; return; }
+      if (password.length < 6) { errEl.textContent = 'كلمة المرور 6 أحرف على الأقل'; errEl.style.display = 'block'; return; }
+      try {
+        const res = await fetch('/api/user/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, password })
+        });
+        const data = await res.json();
+        if (data.success) {
+          setUserToken(data.token);
+          showToast('✅ مرحباً بك ' + data.user.name);
+          closePasswordModal();
+          updateUserUI();
+        } else {
+          errEl.textContent = data.error || 'خطأ';
+          errEl.style.display = 'block';
+        }
+      } catch (e) { errEl.textContent = 'خطأ في الاتصال'; errEl.style.display = 'block'; }
+    };
+
+    // 🟢 دخول المستخدم
+    window.userLogin = async function() {
+      const phone = document.getElementById('userPhone').value.trim();
+      const password = document.getElementById('userPassword').value;
+      const errEl = document.getElementById('userAuthError');
+      if (!phone || !password) { errEl.textContent = 'رقم الجوال وكلمة المرور مطلوبان'; errEl.style.display = 'block'; return; }
+      try {
+        const res = await fetch('/api/user/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, password })
+        });
+        const data = await res.json();
+        if (data.success) {
+          setUserToken(data.token);
+          showToast('✅ أهلاً بعودتك ' + data.user.name);
+          closePasswordModal();
+          updateUserUI();
+        } else {
+          errEl.textContent = data.error || 'خطأ';
+          errEl.style.display = 'block';
+        }
+      } catch (e) { errEl.textContent = 'خطأ في الاتصال'; errEl.style.display = 'block'; }
+    };
+
+    // ========== Initialization ==========
+    async function init() {
+      // Load config from server
+      await loadConfig();
+
+      // Handle login token from OAuth redirect
+      handleLoginToken();
+      updateUserUI();
+
+      // Hide loading screen
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) loadingScreen.classList.add('hidden');
+
+      // Particles
+      const particlesContainer = document.getElementById('heroParticles');
+      if (particlesContainer) {
+        for (let i = 0; i < 8; i++) {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.style.left = Math.random() * 100 + '%';
+          p.style.animationDuration = (Math.random() * 15 + 10) + 's';
+          p.style.animationDelay = Math.random() * 8 + 's';
+          particlesContainer.appendChild(p);
+        }
+      }
+    }
+
+    // ========== Document ready ==========
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+    // ========== Scroll effects (مع throttle للأداء) ==========
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        requestAnimationFrame(() => {
+          const h = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = document.getElementById('scrollProgress');
+          if (progress) progress.style.width = (window.scrollY / h) * 100 + '%';
+          const backBtn = document.getElementById('backToTop');
+          if (backBtn) backBtn.classList.toggle('show', window.scrollY > 600);
+          const navbar = document.getElementById('navbar');
+          if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    });
+
+    document.getElementById('backToTop')?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ========== Mobile menu ==========
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    const overlay = document.getElementById('mobileOverlay');
+
+    function closeMenu() {
+      toggle?.classList.remove('active');
+      nav?.classList.remove('active');
+      overlay?.classList.remove('active');
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      toggle?.classList.add('active');
+      nav?.classList.add('active');
+      overlay?.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = scrollbarWidth + 'px';
+      toggle?.setAttribute('aria-expanded', 'true');
+    }
+
+    toggle?.addEventListener('click', () => {
+      if (nav?.classList.contains('active')) closeMenu();
+      else openMenu();
+    });
+    overlay?.addEventListener('click', closeMenu);
+    nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // ========== Cursor ==========
+    const cursor = document.getElementById('cursorDot');
+    if (cursor && window.matchMedia('(min-width:1025px)').matches) {
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+    }
+
+    // ========== Tooltip ==========
+    setTimeout(() => {
+      const tooltip = document.getElementById('whatsappTooltip');
+      if (tooltip) tooltip.classList.add('show');
+    }, 1500);
+    setTimeout(() => {
+      const tooltip = document.getElementById('whatsappTooltip');
+      if (tooltip) tooltip.classList.remove('show');
+    }, 10000);
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+    </script>
+</body>
+</html>
